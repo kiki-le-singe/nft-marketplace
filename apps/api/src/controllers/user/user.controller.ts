@@ -43,4 +43,9 @@ export class UserController {
       },
     );
   }
+
+  // @Get('/:email')
+  // getUseByEmail(@Param('email') email: string) {
+  //   return this.userService.getUser({ email });
+  // }
 }
