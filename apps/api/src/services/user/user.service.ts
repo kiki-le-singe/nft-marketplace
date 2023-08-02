@@ -15,7 +15,6 @@ export class UserService {
     orderBy?: Prisma.UserOrderByWithRelationInput;
     include?: Prisma.UserInclude;
     select?: UserSelect;
-    // select?: Prisma.UserSelect;
   }): Promise<User[]> {
     const { skip, take, cursor, where, orderBy, include } = params;
 
@@ -29,16 +28,18 @@ export class UserService {
     });
   }
 
-  get() {
-    return { id: 'kj86sdfhk6sdh', name: 'Foo', country: 'Italy' };
-  }
+  async getUser(
+    userWhereUniqueInput: Prisma.UserWhereUniqueInput,
+    params: {
+      include?: Prisma.UserInclude;
+      select?: UserSelect;
+    },
+  ): Promise<User | null> {
+    const { include } = params;
 
-  getUser(param: { userId: number }) {
-    return {
-      id: param.userId,
-      name: 'Foo',
-      country: 'Argentina',
-    };
-    // return param;
+    return this.prisma.user.findUnique({
+      where: userWhereUniqueInput,
+      include,
+    });
   }
 }
