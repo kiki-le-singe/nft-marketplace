@@ -7,7 +7,20 @@ export class UserController {
 
   @Get()
   getUsers() {
-    return this.userService.getUsers();
+    return this.userService.getUsers({
+      include: {
+        creations: {
+          select: {
+            title: true,
+            categories: {
+              select: {
+                title: true,
+              },
+            },
+          },
+        },
+      },
+    });
   }
 
   @Get('/:userId')
