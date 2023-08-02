@@ -23,8 +23,24 @@ export class UserController {
     });
   }
 
-  @Get('/:userId')
-  getUser(@Param() param: { userId: number }) {
-    return this.userService.getUser(param);
+  @Get('/:id')
+  getUseById(@Param('id') id: string) {
+    return this.userService.getUser(
+      { id: Number(id) },
+      {
+        include: {
+          creations: {
+            select: {
+              title: true,
+              categories: {
+                select: {
+                  title: true,
+                },
+              },
+            },
+          },
+        },
+      },
+    );
   }
 }
