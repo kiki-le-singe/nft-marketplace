@@ -7,20 +7,44 @@ export class UserController {
 
   @Get()
   getUsers() {
-    return this.userService.getUsers({
-      include: {
-        creations: {
-          select: {
-            title: true,
-            categories: {
-              select: {
-                title: true,
-              },
-            },
-          },
-        },
-      },
-    });
+    return this.userService.getUsers({});
+
+    // return this.userService.getUsers({
+    //   include: {
+    //     creations: {
+    //       // include: {
+    //       //   categories: {
+    //       //     select: {
+    //       //       title: true,
+    //       //     },
+    //       //   },
+    //       // },
+    //       select: {
+    //         id: true,
+    //         title: true,
+    //         image: true,
+    //       },
+    //     },
+    //   },
+    // });
+
+    // return this.userService.getUsers({
+    //   // where: {
+    //   //   id: 1,
+    //   // },
+    //   include: {
+    //     creations: {
+    //       include: {
+    //         categories: {
+    //           select: {
+    //             title: true,
+    //           },
+    //         },
+    //         // categories: true,
+    //       },
+    //     },
+    //   },
+    // });
   }
 
   @Get('/:id')
@@ -31,12 +55,9 @@ export class UserController {
         include: {
           creations: {
             select: {
+              id: true,
               title: true,
-              categories: {
-                select: {
-                  title: true,
-                },
-              },
+              image: true,
             },
           },
         },
