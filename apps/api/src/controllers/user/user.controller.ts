@@ -48,7 +48,7 @@ export class UserController {
   }
 
   @Get('/:id')
-  getUseById(@Param('id') id: string) {
+  getUserById(@Param('id') id: string) {
     return this.userService.getUser(
       { id: Number(id) },
       {
@@ -66,7 +66,7 @@ export class UserController {
   }
 
   // @Get('/:email')
-  // getUseByEmail(@Param('email') email: string) {
+  // getUserByEmail(@Param('email') email: string) {
   //   return this.userService.getUser({ email });
   // }
 }
