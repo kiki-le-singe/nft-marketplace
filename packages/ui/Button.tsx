@@ -1,8 +1,11 @@
 "use client";
 
+import React from "react";
+
 interface Props {
   primary?: boolean;
   size?: "small" | "large";
+  backgroundColor?: string;
   label?: string;
 }
 
