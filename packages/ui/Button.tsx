@@ -14,12 +14,12 @@ export const Button = ({
   label = "Boop",
   size = "small",
 }: Props) => {
-  const backgroundColor = primary ? "bg-red-600" : "bg-cyan-500";
+  const backgroundColor = primary ? "bg-red-500	" : "bg-sky-500";
   const fontSize = size === "large" ? "text-2xl" : "text-sm";
 
   return (
     <button
-      className={`rounded-lg p-1.5 text-white ${backgroundColor} ${fontSize}`}
+      className={`drop-shadow-lg active:drop-shadow-none hover:bg-violet-600 active:bg-violet-700 rounded-lg p-1.5 text-white ${backgroundColor} ${fontSize}`}
     >
       {label}
     </button>
