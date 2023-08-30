@@ -14,12 +14,12 @@ export const Button = ({
   label = "Boop",
   size = "small",
 }: Props) => {
+  const backgroundColor = primary ? "bg-red-600" : "bg-cyan-500";
+  const fontSize = size === "large" ? "text-2xl" : "text-sm";
+
   return (
     <button
-      style={{
-        backgroundColor: primary ? "red" : "blue",
-        fontSize: size === "large" ? "24px" : "14px",
-      }}
+      className={`rounded-lg p-1.5 text-white ${backgroundColor} ${fontSize}`}
     >
       {label}
     </button>
