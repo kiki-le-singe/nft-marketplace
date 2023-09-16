@@ -7,6 +7,9 @@ module.exports = {
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // include packages if not transpiling
+    "../../packages/ui/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
