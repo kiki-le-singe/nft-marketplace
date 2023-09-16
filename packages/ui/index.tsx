@@ -1,5 +1,5 @@
 import * as React from "react";
 
 // component exports
-export * from "./Button";
-export * from "./NftCard";
+export * from "./components/Button";
+export * from "./components/NftCard";
