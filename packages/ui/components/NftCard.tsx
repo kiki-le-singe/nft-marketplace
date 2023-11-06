@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { AvatarName } from "./AvatarName";
+
 interface Props {
   image: string | null;
 }
@@ -17,8 +19,11 @@ export function NFTCard({ image = null }: Props) {
         <h5 className="text-white text-[22px] font-sans font-semibold capitalize pb-1">
           Designer bear
         </h5>
-        <div className="text-white font-normal font-mono text-base pb-6">
-          Orbitian
+        <div className="pb-6">
+          <AvatarName
+            avatar="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-98@2x.png"
+            name="Mr Fox"
+          />
         </div>
 
         <div className="flex justify-between">
