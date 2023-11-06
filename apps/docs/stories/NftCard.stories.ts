@@ -23,8 +23,8 @@ type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
-  // args: {
-  //   primary: true,
-  //   label: 'NFTCard',
-  // },
+  args: {
+    image:
+      "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-9@2x.png",
+  },
 };

@@ -1,12 +1,14 @@
 import Image from "next/image";
 
 interface Props {
-  image: string;
+  image: string | null;
 }
 
-export function NFTCard({
-  image = "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-9@2x.png",
-}: Props) {
+export function NFTCard({ image = null }: Props) {
+  if (!image) {
+    return null;
+  }
+
   return (
     <div className="bg-dark-gray rounded-20px w-[330px] overflow-hidden">
       <Image src={image} width={330} height={295} alt="Picture of the NFT" />
