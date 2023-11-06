@@ -6,7 +6,18 @@ module.exports = {
     "../../packages/ui/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        ["dark-gray"]: "#3B3B3B",
+      },
+      borderRadius: {
+        ["20px"]: "20px",
+      },
+      fontFamily: {
+        sans: ["var(--font-work-sans)"],
+        mono: ["var(--font-space-mono)"],
+      },
+    },
   },
   plugins: [],
 };
