@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         ["dark-gray"]: "#3B3B3B",
+        black: "#2B2B2B",
       },
       borderRadius: {
         ["20px"]: "20px",

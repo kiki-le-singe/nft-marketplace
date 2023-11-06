@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${SpaceMonoFont.variable} ${WorkSansFont.variable}`}
+      className={`bg-black ${SpaceMonoFont.variable} ${WorkSansFont.variable}`}
     >
       <body>{children}</body>
     </html>
