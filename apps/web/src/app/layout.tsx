@@ -30,7 +30,9 @@ export default function RootLayout({
       lang="en"
       className={`bg-black ${SpaceMonoFont.variable} ${WorkSansFont.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <div className="flex justify-center">{children}</div>
+      </body>
     </html>
   );
 }
