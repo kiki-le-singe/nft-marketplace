@@ -22,6 +22,9 @@ const config: Config = {
         sans: ["var(--font-work-sans)"],
         mono: ["var(--font-space-mono)"],
       },
+      screens: {
+        xxs: "320px",
+      },
     },
   },
   plugins: [],
