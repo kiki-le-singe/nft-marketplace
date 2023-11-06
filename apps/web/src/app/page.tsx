@@ -1,12 +1,17 @@
-import { Button, NFTCard } from "ui";
+import { NFTCard, AvatarName } from "ui";
 
 export default function Page() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
-      <Button />
-      <NFTCard image="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-9@2x.png" />
-    </>
+    <div>
+      <div className="flex w-full justify-center py-10 md:py-14 lg:py-20 xxs:px-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-7">
+          <NFTCard image="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-40@2x.png" />
+          <NFTCard image="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-41@2x.png" />
+          <NFTCard image="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-42@2x.png" />
+          <NFTCard image="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-43@2x.png" />
+        </div>
+      </div>
+
       <div>
         <AvatarName
           avatar="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-98@2x.png"
@@ -18,5 +23,6 @@ export default function Page() {
           theme="big"
         />
       </div>
+    </div>
   );
 }
