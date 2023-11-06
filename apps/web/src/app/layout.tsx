@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
+import "./globals.css";
+
 // Font files can be colocated inside of `app`
 const SpaceMonoFont = localFont({
   src: "./_fonts/SpaceMono-Regular.ttf",
@@ -12,8 +14,6 @@ const WorkSansFont = localFont({
   display: "swap",
   variable: "--font-work-sans",
 });
-
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
