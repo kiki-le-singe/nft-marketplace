@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { NftCard } from "ui";
+import { NFTCard } from "ui";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: "Example/NftCard",
-  component: NftCard,
+  title: "Example/NFTCard",
+  component: NFTCard,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: "centered",
@@ -16,7 +16,7 @@ const meta = {
   // argTypes: {
   //   backgroundColor: { control: 'color' },
   // },
-} satisfies Meta<typeof NftCard>;
+} satisfies Meta<typeof NFTCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -25,6 +25,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   // args: {
   //   primary: true,
-  //   label: 'NftCard',
+  //   label: 'NFTCard',
   // },
 };
