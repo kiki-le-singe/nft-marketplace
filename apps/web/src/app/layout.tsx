@@ -1,4 +1,17 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
+
+// Font files can be colocated inside of `app`
+const SpaceMonoFont = localFont({
+  src: "./_fonts/SpaceMono-Regular.ttf",
+  display: "swap",
+  variable: "--font-space-mono",
+});
+const WorkSansFont = localFont({
+  src: "./_fonts/WorkSans-Regular.woff2",
+  display: "swap",
+  variable: "--font-work-sans",
+});
 
 import "./globals.css";
 
@@ -13,7 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${SpaceMonoFont.variable} ${WorkSansFont.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
