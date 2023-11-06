@@ -4,16 +4,29 @@ import { AvatarName } from "./AvatarName";
 
 interface Props {
   image: string | null;
+  theme?: "light" | "dark";
 }
 
-export function NFTCard({ image = null }: Props) {
+export function NFTCard({ image = null, theme = "light" }: Props) {
   if (!image) {
     return null;
   }
 
+  const containerClassNames = theme === "light" ? "bg-dark-gray" : "bg-black";
+
   return (
-    <div className="bg-dark-gray rounded-20px w-[330px] overflow-hidden">
-      <Image src={image} width={330} height={295} alt="Picture of the NFT" />
+    <div
+      className={`${containerClassNames} rounded-20px w-full md:max-w-[325px] overflow-hidden`}
+    >
+      <div className="w-full h-[238px] md:h-[295px]">
+        <Image
+          src={image}
+          width={325}
+          height={295}
+          alt="Picture of the NFT"
+          className="w-full h-full"
+        />
+      </div>
 
       <div className="pt-5 pb-[25px] px-[30px]">
         <h5 className="text-white text-[22px] font-sans font-semibold capitalize pb-1">
