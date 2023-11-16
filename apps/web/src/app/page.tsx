@@ -1,16 +1,9 @@
-import { NFTCard, AvatarName, CategoryCard } from "ui";
+import { AvatarName, CategoryCard, GridNFTCard } from "ui";
 
 export default function Page() {
   return (
     <div>
-      <div className="flex w-full justify-center py-10 md:py-14 lg:py-20 xxs:px-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-7">
-          <NFTCard image="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-40@2x.png" />
-          <NFTCard image="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-41@2x.png" />
-          <NFTCard image="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-42@2x.png" />
-          <NFTCard image="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-43@2x.png" />
-        </div>
-      </div>
+      <GridNFTCard />
 
       <div>
         <AvatarName

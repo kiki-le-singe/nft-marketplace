@@ -7,11 +7,16 @@ import { TextXSNormalMono } from "./TextXSNormalMono";
 
 interface Props {
   image: string | null;
+  title: string | null;
   theme?: "light" | "dark";
 }
 
-export function NFTCard({ image = null, theme = "light" }: Props) {
-  if (!image) {
+export function NFTCard({
+  title = null,
+  image = null,
+  theme = "light",
+}: Props) {
+  if (!image || !title) {
     return null;
   }
 
@@ -34,7 +39,7 @@ export function NFTCard({ image = null, theme = "light" }: Props) {
       <div className="pt-5 pb-[25px] px-[30px]">
         <TextSemiBoldSans
           tag="h5"
-          text="Designer bear"
+          text={title}
           textTransform="capitalize"
           className="text-[22px] pb-1"
         />

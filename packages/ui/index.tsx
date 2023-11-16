@@ -8,3 +8,4 @@ export * from "./components/CategoryCard";
 export * from "./components/TextNormalMono";
 export * from "./components/TextSemiBoldSans";
 export * from "./components/TextXSNormalMono";
+export * from "./components/GridNFTCard";
