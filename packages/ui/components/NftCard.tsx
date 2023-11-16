@@ -4,10 +4,12 @@ import { AvatarName } from "./AvatarName";
 import { TextNormalMono } from "./TextNormalMono";
 import { TextSemiBoldSans } from "./TextSemiBoldSans";
 import { TextXSNormalMono } from "./TextXSNormalMono";
+import { CreatorData } from "../types";
 
 interface Props {
   image: string | null;
   title: string | null;
+  creator: CreatorData;
   theme?: "light" | "dark";
 }
 
@@ -15,11 +17,13 @@ export function NFTCard({
   title = null,
   image = null,
   theme = "light",
+  creator,
 }: Props) {
   if (!image || !title) {
     return null;
   }
 
+  const { avatar, name } = creator;
   const containerClassNames = theme === "light" ? "bg-dark-gray" : "bg-black";
 
   return (
@@ -44,10 +48,7 @@ export function NFTCard({
           className="text-[22px] pb-1"
         />
         <div className="pb-6">
-          <AvatarName
-            avatar="https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-98@2x.png"
-            name="Mr Fox"
-          />
+          <AvatarName avatar={avatar} name={name} />
         </div>
 
         <div className="flex justify-between">
