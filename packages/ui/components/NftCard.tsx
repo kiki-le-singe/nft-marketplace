@@ -37,6 +37,7 @@ export function NFTCard({
           height={295}
           alt="Picture of the NFT"
           className="w-full h-full"
+          priority
         />
       </div>
 
