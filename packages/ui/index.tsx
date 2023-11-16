@@ -4,3 +4,7 @@ import * as React from "react";
 export * from "./components/Button";
 export * from "./components/NFTCard";
 export * from "./components/AvatarName";
+export * from "./components/CategoryCard";
+export * from "./components/TextNormalMono";
+export * from "./components/TextSemiBoldSans";
+export * from "./components/TextXSNormalMono";
