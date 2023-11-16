@@ -1,6 +1,6 @@
 import { NFTCard } from "./NFTCard";
 
-type NFTCardData = {
+interface NFTCardData = {
   image: string;
   title: string;
 };
