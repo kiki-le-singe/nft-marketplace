@@ -50,8 +50,8 @@ export function GridCategoryCard() {
   ];
 
   return (
-    <div className="flex w-full justify-center py-10 md:py-14 lg:py-20 xxs:px-5 bg-red-400">
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5 md:gap-7 lg:gap-7">
+    <div className="flex w-full justify-center py-10 md:py-14 lg:py-20 xxs:px-0">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 xs:gap-5 md:gap-7 lg:gap-7">
         {data.map((categoryCard: CategoryCardData) => (
           <CategoryCard {...categoryCard} />
         ))}

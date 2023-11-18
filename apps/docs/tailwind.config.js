@@ -18,6 +18,10 @@ module.exports = {
         sans: ["var(--font-work-sans)"],
         mono: ["var(--font-space-mono)"],
       },
+      screens: {
+        xxs: "320px",
+        xs: "375px",
+      },
     },
   },
   plugins: [],

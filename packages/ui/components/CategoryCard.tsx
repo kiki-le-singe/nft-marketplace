@@ -71,7 +71,7 @@ export function CategoryCard({ title, image }: Props): JSX.Element | null {
         <TextSemiBoldSans
           text={title}
           textTransform="capitalize"
-          className="text-base"
+          className="text-sm lg:text-base"
         />
       </div>
     </div>
