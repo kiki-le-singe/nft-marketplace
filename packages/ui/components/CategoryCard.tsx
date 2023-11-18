@@ -18,7 +18,7 @@ interface Props {
 
 enum CategoryKey {
   Art = "art",
-  Collectible = "collectible",
+  Collectibles = "collectibles",
   Music = "music",
   Photography = "photography",
   Video = "video",
@@ -29,7 +29,7 @@ enum CategoryKey {
 
 const categories: { [key in CategoryKey]: JSX.Element } = {
   [CategoryKey.Art]: <PaintBrushIcon />,
-  [CategoryKey.Collectible]: <SwatchesIcon />,
+  [CategoryKey.Collectibles]: <SwatchesIcon />,
   [CategoryKey.Music]: <MusicNotesIcon />,
   [CategoryKey.Photography]: <CameraIcon />,
   [CategoryKey.Video]: <VideoCameraIcon />,
