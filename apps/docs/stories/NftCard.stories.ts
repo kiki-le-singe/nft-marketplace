@@ -25,14 +25,26 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     image:
-      "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-9@2x.png",
+      "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-12@2x.png",
+    title: "designer bear",
+    creator: {
+      avatar:
+        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-99@2x.png",
+      name: "animakid",
+    },
   },
 };
 
 export const Dark: Story = {
   args: {
-    theme: "dark",
     image:
-      "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-9@2x.png",
+      "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-12@2x.png",
+    title: "designer bear",
+    theme: "dark",
+    creator: {
+      avatar:
+        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-99@2x.png",
+      name: "animakid",
+    },
   },
 };
