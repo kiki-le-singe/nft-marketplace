@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "WorkSans-Regular";
+  src: url("../stories/assets/_fonts/WorkSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SpaceMono-Regular";
+  src: url("../stories/assets/_fonts/SpaceMono-Regular.ttf") format("ttf");
+}
+
+:root {
+  --font-work-sans: "WorkSans-Regular", sans-serif;
+  --font-space-mono: "SpaceMono-Regular", sans-serif;
+}
