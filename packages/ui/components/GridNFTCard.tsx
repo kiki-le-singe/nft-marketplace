@@ -52,12 +52,10 @@ export function GridNFTCard() {
   ];
 
   return (
-    <div className="flex w-full justify-center py-10 md:py-14 lg:py-20 xxs:px-5">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-7">
-        {data.map((nftCard: NFTCardData) => (
-          <NFTCard {...nftCard} />
-        ))}
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-7">
+      {data.map((nftCard: NFTCardData) => (
+        <NFTCard {...nftCard} />
+      ))}
     </div>
   );
 }

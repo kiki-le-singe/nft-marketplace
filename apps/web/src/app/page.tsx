@@ -2,7 +2,7 @@ import { ArtistCard, AvatarName, GridCategoryCard, GridNFTCard } from "ui";
 
 export default function Page() {
   return (
-    <div>
+    <div className="flex flex-col xxs:px-2 xs:px-5 sm:px-5 lg:px-0 gap-y-10 md:gap-y-14 lg:gap-y-20">
       <GridNFTCard />
 
       <div>
