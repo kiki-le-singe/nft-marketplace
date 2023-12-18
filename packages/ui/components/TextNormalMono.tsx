@@ -4,5 +4,9 @@ interface Props {
 }
 
 export function TextNormalMono({ color = "text-white", text = null }: Props) {
-  return text && <div className={`text-base-normal-mono ${color}`}>{text}</div>;
+  return (
+    text && (
+      <div className={`font-normal font-mono text-base ${color}`}>{text}</div>
+    )
+  );
 }

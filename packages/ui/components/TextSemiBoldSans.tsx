@@ -18,7 +18,7 @@ export function TextSemiBoldSans({
   return (
     text && (
       <Tag
-        className={`text-semibold-sans ${color} ${textTransform} ${className}`}
+        className={`font-semibold font-sans ${color} ${textTransform} ${className}`}
       >
         {text}
       </Tag>

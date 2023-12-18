@@ -16,7 +16,7 @@ export function TextNormalSans({
 
   return (
     text && (
-      <Tag className={`text-base-normal-sans ${color} ${className}`}>
+      <Tag className={`text-base font-normal font-sans ${color} ${className}`}>
         {text}
       </Tag>
     )
