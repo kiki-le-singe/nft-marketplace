@@ -17,9 +17,10 @@ export default function Page() {
         />
       </div>
 
-      <GridCategoryCard />
-
       <GridArtistCard />
+      <GridCategoryCard />
+      <GridNFTCard />
+      {/* https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/screen-tablet@1x.png */}
     </div>
   );
 }
