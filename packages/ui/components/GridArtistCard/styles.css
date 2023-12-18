@@ -1,0 +1,13 @@
+/*
+There are 12 displayed items in the grid. 
+The first 5 are always visible, the sixth is visible from medium screen, and the rest are visible on large screens.
+*/
+ul.grid-artist-card li:nth-last-child(-n + 7) {
+  @apply max-md:hidden;
+}
+ul.grid-artist-card li:nth-last-child(-n + 6) {
+  @apply md:hidden;
+}
+ul.grid-artist-card li:nth-last-child(-n + 12) {
+  @apply lg:block;
+}

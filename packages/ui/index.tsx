@@ -11,3 +11,4 @@ export * from "./components/TextXSNormalMono";
 export * from "./components/GridNFTCard";
 export * from "./components/GridCategoryCard";
 export * from "./components/ArtistCard";
+export * from "./components/GridArtistCard";
