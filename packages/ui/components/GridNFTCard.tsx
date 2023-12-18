@@ -1,5 +1,8 @@
-import { CreatorData } from "../types";
+import { ButtonTheme, CreatorData } from "../types";
+import { Button } from "./Button";
 import { NFTCard } from "./NFTCard";
+
+// @see that https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
 
 interface NFTCardData {
   image: string;
@@ -61,9 +64,9 @@ export function GridNFTCard() {
         ))}
       </ul>
 
-      <button type="button" className="btn-purple hover:scale-103">
-        See All
-      </button>
+      <Button text="See All" />
+      <Button theme={ButtonTheme.WHITE} text="See All" />
+      <Button theme={ButtonTheme.TRANSPARENT} text="See All" />
     </>
   );
 }

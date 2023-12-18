@@ -11,6 +11,7 @@ module.exports = {
         ["dark-gray"]: "#3B3B3B",
         black: "#2B2B2B",
         gray: "#858584",
+        purple: "#A259FF",
       },
       borderRadius: {
         ["20px"]: "20px",
