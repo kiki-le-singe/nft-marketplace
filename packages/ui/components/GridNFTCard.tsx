@@ -52,12 +52,18 @@ export function GridNFTCard() {
   ];
 
   return (
-    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-7">
-      {data.map((nftCard: NFTCardData, index) => (
-        <li key={`NFTCard-${index}`}>
-          <NFTCard {...nftCard} />
-        </li>
-      ))}
-    </ul>
+    <>
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-7">
+        {data.map((nftCard: NFTCardData, index) => (
+          <li key={`NFTCard-${index}`}>
+            <NFTCard {...nftCard} />
+          </li>
+        ))}
+      </ul>
+
+      <button type="button" className="btn-purple hover:scale-103">
+        See All
+      </button>
+    </>
   );
 }
