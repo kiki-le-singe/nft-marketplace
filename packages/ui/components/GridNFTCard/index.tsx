@@ -1,6 +1,7 @@
 import { ButtonTheme, CreatorData } from "../../types";
 import { Button } from "../Button";
 import { NFTCard } from "../NFTCard";
+import EyeIcon from "../icons/EyeIcon";
 
 import "./styles.css";
 
@@ -58,7 +59,7 @@ export function GridNFTCard() {
     <>
       <ul className="grid-nft-card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-7">
         {data.map((nftCard: NFTCardData, index) => (
-          <li key={`NFTCard-${index}`}>
+          <li key={`NFTCard-${index}`} className="custom-animation-scale">
             <NFTCard {...nftCard} />
           </li>
         ))}
@@ -66,7 +67,11 @@ export function GridNFTCard() {
 
       <Button text="See All" />
       <Button theme={ButtonTheme.WHITE} text="See All" />
-      <Button theme={ButtonTheme.TRANSPARENT} text="See All" />
+      <Button
+        icon={<EyeIcon />}
+        theme={ButtonTheme.TRANSPARENT}
+        text="See All"
+      />
     </>
   );
 }

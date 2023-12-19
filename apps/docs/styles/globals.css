@@ -16,3 +16,7 @@
   --font-work-sans: "WorkSans-Regular", sans-serif;
   --font-space-mono: "SpaceMono-Regular", sans-serif;
 }
+
+.custom-animation-scale {
+  @apply hover:scale-95 ease-in duration-200;
+}

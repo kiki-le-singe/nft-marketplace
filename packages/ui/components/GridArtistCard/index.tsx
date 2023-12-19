@@ -74,7 +74,10 @@ export function GridArtistCard() {
   return (
     <ul className="grid-artist-card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-[30px]">
       {data.map((artistCardData: ArtistCardData, index) => (
-        <li className="relative" key={`ArtistCard-${index}`}>
+        <li
+          className="relative custom-animation-scale"
+          key={`ArtistCard-${index}`}
+        >
           <div className="absolute top-3 left-3 lg:top-3.5 lg:left-5 flex justify-center items-center w-[30px] h-[30px] rounded-full bg-black text-white">
             {index + 1}
           </div>
