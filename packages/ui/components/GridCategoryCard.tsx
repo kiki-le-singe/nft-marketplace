@@ -50,12 +50,17 @@ export function GridCategoryCard() {
   ];
 
   return (
-    <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 xs:gap-5 md:gap-7 lg:gap-7">
-      {data.map((categoryCard: CategoryCardData, index) => (
-        <li key={`CategoryCard-${index}`} className="custom-animation-scale">
-          <CategoryCard {...categoryCard} />
-        </li>
-      ))}
-    </ul>
+    <div className="w-full">
+      <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 xs:gap-5 md:gap-7 lg:gap-y-7">
+        {data.map((categoryCard: CategoryCardData, index) => (
+          <li
+            key={`CategoryCard-${index}`}
+            className="w-full custom-animation-scale"
+          >
+            <CategoryCard {...categoryCard} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

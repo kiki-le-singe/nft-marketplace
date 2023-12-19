@@ -28,7 +28,7 @@ export function NFTCard({
 
   return (
     <div
-      className={`${containerClassNames} rounded-20px w-full md:max-w-[325px] overflow-hidden`}
+      className={`${containerClassNames} rounded-20px w-full overflow-hidden`}
     >
       <div className="w-full h-[238px] md:h-[295px]">
         <Image

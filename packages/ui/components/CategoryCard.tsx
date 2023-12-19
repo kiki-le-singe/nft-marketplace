@@ -56,13 +56,13 @@ export function CategoryCard({ title, image }: Props): JSX.Element | null {
   }, [title]);
 
   return (
-    <div className="rounded-20px w-[148px] lg:w-[240px] overflow-hidden">
+    <div className="rounded-20px overflow-hidden w-full">
       <div className="relative">
         <Image
           src={image}
           width={240}
           height={240}
-          className="h-[142px] lg:h-[240px]"
+          className="object-cover w-full h-[142px] lg:h-[240px]"
           alt={`Category of ${title}`}
         />
         {renderIcon}

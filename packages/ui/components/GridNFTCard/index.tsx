@@ -1,6 +1,8 @@
 import { ButtonTheme, CreatorData } from "../../types";
 import { Button } from "../Button";
 import { NFTCard } from "../NFTCard";
+import { TextNormalSans } from "../TextNormalSans";
+import { TextSemiBoldSans } from "../TextSemiBoldSans";
 import EyeIcon from "../icons/EyeIcon";
 
 import "./styles.css";
@@ -56,22 +58,46 @@ export function GridNFTCard() {
   ];
 
   return (
-    <>
-      <ul className="grid-nft-card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-7">
-        {data.map((nftCard: NFTCardData, index) => (
-          <li key={`NFTCard-${index}`} className="custom-animation-scale">
-            <NFTCard {...nftCard} />
-          </li>
-        ))}
-      </ul>
+    <div className="flex flex-col gap-y-6 md:gap-y-10 md:items-end md:flex-row md:flex-wrap">
+      <div className="md:basis-8/12">
+        <TextSemiBoldSans
+          tag="h2"
+          text="Discover More NFTs"
+          className="text-lg md:text-[38px] mb-0 md:mb-4"
+        />
+        <TextNormalSans
+          tag="p"
+          text="Explore new trending NFTs"
+          className="text-normal md:text-[22px]"
+        />
+      </div>
 
-      <Button text="See All" />
+      <div className="max-md:order-last md:basis-4/12 md:flex md:justify-end">
+        <Button
+          icon={<EyeIcon />}
+          theme={ButtonTheme.TRANSPARENT}
+          text="See All"
+          classNames=""
+        />
+      </div>
+
+      <div className="w-full">
+        <ul className="grid-nft-card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-7">
+          {data.map((nftCard: NFTCardData, index) => (
+            <li key={`NFTCard-${index}`} className="custom-animation-scale">
+              <NFTCard {...nftCard} />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* <Button text="See All" />
       <Button theme={ButtonTheme.WHITE} text="See All" />
       <Button
         icon={<EyeIcon />}
         theme={ButtonTheme.TRANSPARENT}
         text="See All"
-      />
-    </>
+      /> */}
+    </div>
   );
 }

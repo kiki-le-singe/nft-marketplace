@@ -4,18 +4,22 @@ import clsx from "clsx";
 
 import { ButtonTheme } from "../types";
 interface ButtonProps {
+  icon?: JSX.Element | null;
   theme?: ButtonTheme;
   text: string | null;
   onClick?: () => void;
+  classNames?: string;
 }
 
 export function Button({
+  icon = null,
   theme = ButtonTheme.PURPLE,
   text,
   onClick = () => {},
+  classNames = "",
 }: ButtonProps) {
-  const classNames = clsx(
-    "flex justify-center items-center px-[30px] h-[60px] rounded-[20px] hover:scale-95 ease-in duration-200",
+  const _classNames = clsx(
+    `flex justify-center items-center gap-3 px-[30px] h-[60px] rounded-[20px]  custom-animation-scale ${classNames}`,
     {
       "bg-purple": theme === ButtonTheme.PURPLE,
       "bg-white": theme === ButtonTheme.WHITE,
@@ -31,7 +35,8 @@ export function Button({
   }
 
   return (
-    <button type="button" onClick={handleClick} className={classNames}>
+    <button type="button" onClick={handleClick} className={_classNames}>
+      {icon}
       {text}
     </button>
   );
