@@ -77,7 +77,7 @@ export function GridNFTCard() {
           icon={<EyeIcon />}
           theme={ButtonTheme.TRANSPARENT}
           text="See All"
-          classNames=""
+          classNames="w-full md:w-fit"
         />
       </div>
 
