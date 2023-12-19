@@ -1,8 +1,8 @@
-import { ButtonTheme, CreatorData } from "../types";
-import { Button } from "./Button";
-import { NFTCard } from "./NFTCard";
+import { ButtonTheme, CreatorData } from "../../types";
+import { Button } from "../Button";
+import { NFTCard } from "../NFTCard";
 
-// @see that https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+import "./styles.css";
 
 interface NFTCardData {
   image: string;
@@ -42,21 +42,21 @@ export function GridNFTCard() {
         name: "rustyrobot",
       },
     },
-    {
-      image:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-12@2x.png",
-      title: "designer bear",
-      creator: {
-        avatar:
-          "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-99@2x.png",
-        name: "animakid",
-      },
-    },
+    // {
+    //   image:
+    //     "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-12@2x.png",
+    //   title: "designer bear",
+    //   creator: {
+    //     avatar:
+    //       "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-99@2x.png",
+    //     name: "animakid",
+    //   },
+    // },
   ];
 
   return (
     <>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-7">
+      <ul className="grid-nft-card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-7">
         {data.map((nftCard: NFTCardData, index) => (
           <li key={`NFTCard-${index}`}>
             <NFTCard {...nftCard} />

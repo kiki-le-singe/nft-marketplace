@@ -1,0 +1,10 @@
+/*
+There are 3 displayed items in the grid. 
+The first 2 are always visible, the third is visible for small and large screens.
+*/
+ul.grid-nft-card li:nth-last-child(-n + 1) {
+  @apply md:hidden;
+}
+ul.grid-nft-card li:nth-last-child(-n + 1) {
+  @apply lg:block;
+}
