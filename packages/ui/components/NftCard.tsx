@@ -27,17 +27,14 @@ export function NFTCard({
   const containerClassNames = theme === "light" ? "bg-dark-gray" : "bg-black";
 
   return (
-    <div
-      className={`${containerClassNames} rounded-20px w-full overflow-hidden`}
-    >
-      <div className="w-full h-[238px] md:h-[295px]">
+    <div className={`${containerClassNames} rounded-20px overflow-hidden`}>
+      <div className="relative w-full h-[238px] md:h-[295px]">
         <Image
           src={image}
-          width={325}
-          height={295}
           alt="Picture of the NFT"
-          className="w-full h-full"
-          priority
+          sizes="630px"
+          className="object-cover"
+          fill
         />
       </div>
 
