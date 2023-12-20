@@ -4,10 +4,10 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "cdn.animaapp.com",
-        port: "",
-        pathname: "/projects/**/img/**",
+        protocol: "http",
+        hostname: "localhost",
+        port: "3002",
+        pathname: "/images/**",
       },
     ],
   },

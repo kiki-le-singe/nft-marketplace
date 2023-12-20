@@ -25,7 +25,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     title: "Art",
-    image:
-      "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-55@2x.png",
+    image: "http://localhost:3002/images/crocodile.png",
   },
 };

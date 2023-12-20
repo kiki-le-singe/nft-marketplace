@@ -25,8 +25,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     name: "Mr Fox",
-    avatar:
-      "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-9@2x.png",
+    avatar: "http://localhost:3002/images/cat.png",
   },
 };
 
@@ -34,7 +33,6 @@ export const Big: Story = {
   args: {
     theme: "big",
     name: "Mr Fox",
-    avatar:
-      "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-9@2x.png",
+    avatar: "http://localhost:3002/images/dog.png",
   },
 };

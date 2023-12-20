@@ -10,63 +10,51 @@ interface ArtistCardData {
 export function GridArtistCard() {
   const data: ArtistCardData[] = [
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-98@2x.png",
+      avatar: "http://localhost:3002/images/cat.png",
       name: "Keepitreal",
     },
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-88@2x.png",
+      avatar: "http://localhost:3002/images/dog.png",
       name: "Digilab",
     },
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-90@2x.png",
+      avatar: "http://localhost:3002/images/fox.png",
       name: "Juanie",
     },
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-89@2x.png",
+      avatar: "http://localhost:3002/images/crocodile.png",
       name: "Gravityone",
     },
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-92@2x.png",
+      avatar: "http://localhost:3002/images/elephant.png",
       name: "Mr Fox",
     },
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-91@2x.png",
+      avatar: "http://localhost:3002/images/hyena.png",
       name: "Bluewhale",
     },
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-103@2x.png",
+      avatar: "http://localhost:3002/images/shark.png",
       name: "Shroomie",
     },
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-104@2x.png",
+      avatar: "http://localhost:3002/images/robot.png",
       name: "Robotica",
     },
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-105@2x.png",
+      avatar: "http://localhost:3002/images/mouse.png",
       name: "Rustyrobot",
     },
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-106@2x.png",
+      avatar: "http://localhost:3002/images/lion.png",
       name: "Animakid",
     },
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-107@2x.png",
+      avatar: "http://localhost:3002/images/panda.png",
       name: "Dotgu",
     },
     {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-108@2x.png",
+      avatar: "http://localhost:3002/images/bird.png",
       name: "Ghiblier",
     },
   ];

@@ -16,42 +16,36 @@ interface NFTCardData {
 export function GridNFTCard() {
   const data: NFTCardData[] = [
     {
-      image:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-9@2x.png",
+      image: "http://localhost:3002/images/parrot.png",
       title: "foxy life",
       creator: {
-        avatar:
-          "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-102@2x.png",
+        avatar: "http://localhost:3002/images/parrot.png",
         name: "bluewhale",
       },
     },
     {
-      image:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-40@2x.png",
+      image: "http://localhost:3002/images/snail.png",
       title: "cat from future",
       creator: {
-        avatar:
-          "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-105@2x.png",
+        avatar: "http://localhost:3002/images/snail.png",
         name: "keepitreal",
       },
     },
     {
-      image:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-8@2x.png",
+      image: "http://localhost:3002/images/tiger.png",
       title: "psycho dog",
       creator: {
-        avatar:
-          "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-98@2x.png",
+        avatar: "http://localhost:3002/images/tiger.png",
         name: "rustyrobot",
       },
     },
     // {
     //   image:
-    //     "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-12@2x.png",
+    //     "http://localhost:3002/images/panda.png",
     //   title: "designer bear",
     //   creator: {
     //     avatar:
-    //       "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-99@2x.png",
+    //       "http://localhost:3002/images/panda.png",
     //     name: "animakid",
     //   },
     // },

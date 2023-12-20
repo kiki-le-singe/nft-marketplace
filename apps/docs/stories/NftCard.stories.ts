@@ -24,12 +24,10 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
   args: {
-    image:
-      "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-12@2x.png",
+    image: "http://localhost:3002/images/ant.png",
     title: "designer bear",
     creator: {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-99@2x.png",
+      avatar: "http://localhost:3002/images/cat.png",
       name: "animakid",
     },
   },
@@ -37,13 +35,11 @@ export const Default: Story = {
 
 export const Dark: Story = {
   args: {
-    image:
-      "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-12@2x.png",
+    image: "http://localhost:3002/images/elephant2.png",
     title: "designer bear",
     theme: "dark",
     creator: {
-      avatar:
-        "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-99@2x.png",
+      avatar: "http://localhost:3002/images/panda.png",
       name: "animakid",
     },
   },
