@@ -84,14 +84,6 @@ export function GridNFTCard() {
           ))}
         </ul>
       </div>
-
-      {/* <Button text="See All" />
-      <Button theme={ButtonTheme.WHITE} text="See All" />
-      <Button
-        icon={<EyeIcon />}
-        theme={ButtonTheme.TRANSPARENT}
-        text="See All"
-      /> */}
     </div>
   );
 }
