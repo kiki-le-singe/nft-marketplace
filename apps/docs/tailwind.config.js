@@ -12,6 +12,7 @@ module.exports = {
         black: "#2B2B2B",
         gray: "#858584",
         purple: "#A259FF",
+        ["black-transparent"]: "rgba(59, 59, 59, 0.50)",
       },
       borderRadius: {
         ["20px"]: "20px",
