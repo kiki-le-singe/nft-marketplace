@@ -1,12 +1,19 @@
 interface Props {
+  tag?: keyof JSX.IntrinsicElements;
   color?: string;
   text?: string | null;
 }
 
-export function TextNormalMono({ color = "text-white", text = null }: Props) {
+export function TextNormalMono({
+  tag = "div",
+  color = "text-white",
+  text = null,
+}: Props) {
+  const Tag = tag;
+
   return (
     text && (
-      <div className={`font-normal font-mono text-base ${color}`}>{text}</div>
+      <Tag className={`font-normal font-mono text-base ${color}`}>{text}</Tag>
     )
   );
 }
