@@ -19,7 +19,7 @@ export function Button({
   classNames = "",
 }: ButtonProps) {
   const _classNames = clsx(
-    `flex justify-center items-center gap-3 px-[30px] h-[60px] rounded-20px  custom-animation-scale ${classNames}`,
+    `flex justify-center items-center gap-3 px-30px h-[60px] rounded-20px  custom-animation-scale ${classNames}`,
     {
       "bg-purple": theme === ButtonTheme.PURPLE,
       "bg-white": theme === ButtonTheme.WHITE,

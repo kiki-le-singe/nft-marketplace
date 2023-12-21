@@ -60,7 +60,7 @@ export function GridArtistCard() {
   ];
 
   return (
-    <ul className="grid-artist-card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-[30px]">
+    <ul className="grid-artist-card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-30px">
       {data.map((artistCardData: ArtistCardData, index) => (
         <li
           className="relative custom-animation-scale"

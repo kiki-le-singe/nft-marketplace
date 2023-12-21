@@ -38,7 +38,7 @@ export function NFTCard({
         />
       </div>
 
-      <div className="pt-5 pb-[25px] px-[30px]">
+      <div className="pt-5 pb-[25px] px-30px">
         <TextSemiBoldSans
           tag="h5"
           text={title}

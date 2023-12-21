@@ -29,6 +29,9 @@ const config: Config = {
         xs: "375px",
         sm: "425px",
       },
+      spacing: {
+        "30px": "1.875rem",
+      },
     },
   },
   plugins: [],
