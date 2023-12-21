@@ -31,7 +31,7 @@ export default function Page() {
         <GridNFTCard />
       </div>
 
-      <div className="bg-[url('http://localhost:3002/images/mushroom.png')] bg-cover bg-no-repeat bg-top md:bg-center lg:bg-center w-full h-auto pt-[120px] px-7 xs:px-14 pb-10">
+      <div className="bg-[url('http://localhost:3002/images/mushroom.png')] bg-cover bg-no-repeat bg-top md:bg-center lg:bg-center w-full h-auto pt-[120px] px-7 xs:px-14 lg:px-[5vw] xl:px-[15vw] 2xl:px-[15vw] pb-10">
         <div className="py-[10px] mb-7 px-5 bg-black rounded-20px w-fit">
           <AvatarName
             avatar="http://localhost:3002/images/cat.png"
@@ -49,44 +49,46 @@ export default function Page() {
           </div>
 
           <div className="col-span-1 md:row-span-2 row-start-2">
-            <div className="flex flex-col w-full gap-y-2 p-30px rounded-20px bg-black-transparent md:justify-center md:h-full">
-              <TextNormalMono
-                tag="p"
-                text="Auction ends in:"
-                classNames="text-xs"
-              />
+            <div className="md:flex md:justify-end md:items-end md:h-full">
+              <div className="flex flex-col w-full gap-y-2 p-30px rounded-20px bg-black-transparent md:justify-center md:h-fit md:w-fit">
+                <TextNormalMono
+                  tag="p"
+                  text="Auction ends in:"
+                  classNames="text-xs"
+                />
 
-              <div className="flex flex-row gap-x-2">
-                <TextNormalMono
-                  tag="span"
-                  text="59"
-                  fontWeight="font-bold"
-                  fontSize="text-4xl"
-                />
-                <TextNormalMono
-                  tag="span"
-                  text=":"
-                  fontWeight="font-bold"
-                  fontSize="text-4xl"
-                />
-                <TextNormalMono
-                  tag="span"
-                  text="59"
-                  fontWeight="font-bold"
-                  fontSize="text-4xl"
-                />
-                <TextNormalMono
-                  tag="span"
-                  text=":"
-                  fontWeight="font-bold"
-                  fontSize="text-4xl"
-                />
-                <TextNormalMono
-                  tag="span"
-                  text="59"
-                  fontWeight="font-bold"
-                  fontSize="text-4xl"
-                />
+                <div className="flex flex-row gap-x-2">
+                  <TextNormalMono
+                    tag="span"
+                    text="59"
+                    fontWeight="font-bold"
+                    fontSize="text-4xl"
+                  />
+                  <TextNormalMono
+                    tag="span"
+                    text=":"
+                    fontWeight="font-bold"
+                    fontSize="text-4xl"
+                  />
+                  <TextNormalMono
+                    tag="span"
+                    text="59"
+                    fontWeight="font-bold"
+                    fontSize="text-4xl"
+                  />
+                  <TextNormalMono
+                    tag="span"
+                    text=":"
+                    fontWeight="font-bold"
+                    fontSize="text-4xl"
+                  />
+                  <TextNormalMono
+                    tag="span"
+                    text="59"
+                    fontWeight="font-bold"
+                    fontSize="text-4xl"
+                  />
+                </div>
               </div>
             </div>
           </div>
