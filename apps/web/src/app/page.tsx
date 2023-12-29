@@ -1,15 +1,10 @@
 import {
   AvatarName,
-  Button,
   GridArtistCard,
   GridCategoryCard,
   GridNFTCard,
   NFTHighlight,
-  TextNormalMono,
-  TextSemiBoldSans,
 } from "ui";
-import EyeIcon from "ui/components/icons/EyeIcon";
-import { ButtonTheme } from "ui/types";
 
 export default function Page() {
   return (
