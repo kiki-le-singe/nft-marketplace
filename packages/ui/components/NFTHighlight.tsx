@@ -27,7 +27,7 @@ export function NFTHighlight() {
               <div className="flex flex-col w-full gap-y-2 p-30px rounded-20px bg-black-transparent md:justify-center md:h-fit md:w-fit">
                 <TextNormalMono
                   tag="p"
-                  text="Auction ends in:"
+                  text="Action ends in:"
                   classNames="text-xs"
                 />
 
