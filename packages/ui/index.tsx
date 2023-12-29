@@ -13,3 +13,4 @@ export * from "./components/GridCategoryCard";
 export * from "./components/ArtistCard";
 export * from "./components/GridArtistCard";
 export * from "./components/icons/EyeIcon";
+export * from "./components/NFTHighlight";
