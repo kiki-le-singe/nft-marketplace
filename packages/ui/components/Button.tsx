@@ -6,7 +6,7 @@ import { ButtonTheme } from "../types";
 interface ButtonProps {
   icon?: JSX.Element | null;
   theme?: ButtonTheme;
-  text: string | null;
+  children?: React.ReactNode;
   onClick?: () => void;
   classNames?: string;
 }
@@ -14,7 +14,7 @@ interface ButtonProps {
 export function Button({
   icon = null,
   theme = ButtonTheme.PURPLE,
-  text,
+  children = null,
   onClick = () => {},
   classNames = "",
 }: ButtonProps) {
@@ -37,7 +37,7 @@ export function Button({
   return (
     <button type="button" onClick={handleClick} className={_classNames}>
       {icon}
-      {text}
+      {children}
     </button>
   );
 }

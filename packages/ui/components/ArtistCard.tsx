@@ -29,10 +29,12 @@ export function ArtistCard({ creator }: Props) {
       />
 
       <div>
-        <TextSemiBoldSans text={name} className="text-[22px] lg:text-center" />
+        <TextSemiBoldSans className="text-[22px] lg:text-center">
+          {name}
+        </TextSemiBoldSans>
         <div className="flex gap-1.5">
-          <TextNormalSans text="Total Sales:" color="text-gray" />{" "}
-          <TextNormalMono text="34.53 ETH" />
+          <TextNormalSans color="text-gray">Total Sales: </TextNormalSans>
+          <TextNormalMono>34.53 ETH</TextNormalMono>
         </div>
       </div>
     </div>

@@ -10,14 +10,13 @@ export function HowItWorks() {
       <div className="md:basis-8/12">
         <TextSemiBoldSans
           tag="h2"
-          text="How it works"
           className="text-lg md:text-[38px] mb-0 md:mb-4"
-        />
-        <TextNormalSans
-          tag="p"
-          text="Find out how to get started"
-          className="text-normal md:text-[22px]"
-        />
+        >
+          How it works
+        </TextSemiBoldSans>
+        <TextNormalSans tag="p" className="text-normal md:text-[22px]">
+          Find out how to get started
+        </TextNormalSans>
       </div>
 
       <div className="flex flex-col gap-5 md:flex-row md:gap-30px">
@@ -27,14 +26,13 @@ export function HowItWorks() {
           </div>
 
           <div className="flex flex-col gap-2.5">
-            <TextNormalSans
-              text="Setup Your wallet"
-              className="font-semibold md:text-center"
-            />
-            <TextNormalSans
-              text="Set up your wallet of choice. Connect it to the NFT market by clicking the wallet icon in the top right corner."
-              className="text-xs  md:text-center"
-            />
+            <TextNormalSans className="font-semibold md:text-center">
+              Setup Your wallet
+            </TextNormalSans>
+            <TextNormalSans className="text-xs  md:text-center">
+              Set up your wallet of choice. Connect it to the NFT market by
+              clicking the wallet icon in the top right corner.
+            </TextNormalSans>
           </div>
         </div>
 
@@ -44,14 +42,13 @@ export function HowItWorks() {
           </div>
 
           <div className="flex flex-col gap-2.5">
-            <TextNormalSans
-              text="Create Collection"
-              className="font-semibold  md:text-center"
-            />
-            <TextNormalSans
-              text="Upload your work and setup your collection. Add a description, social links and floor price."
-              className="text-xs  md:text-center"
-            />
+            <TextNormalSans className="font-semibold  md:text-center">
+              Create Collection
+            </TextNormalSans>
+            <TextNormalSans className="text-xs  md:text-center">
+              Upload your work and setup your collection. Add a description,
+              social links and floor price.
+            </TextNormalSans>
           </div>
         </div>
 
@@ -61,14 +58,13 @@ export function HowItWorks() {
           </div>
 
           <div className="flex flex-col gap-2.5">
-            <TextNormalSans
-              text="Start Earning"
-              className="font-semibold  md:text-center"
-            />
-            <TextNormalSans
-              text="Choose between auctions and fixed-price listings. Start earning by selling your NFTs or trading others."
-              className="text-xs  md:text-center"
-            />
+            <TextNormalSans className="font-semibold  md:text-center">
+              Start Earning
+            </TextNormalSans>
+            <TextNormalSans className="text-xs  md:text-center">
+              Choose between auctions and fixed-price listings. Start earning by
+              selling your NFTs or trading others.
+            </TextNormalSans>
           </div>
         </div>
       </div>

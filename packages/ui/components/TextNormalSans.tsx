@@ -1,7 +1,7 @@
 interface Props {
   tag?: keyof JSX.IntrinsicElements;
   color?: string;
-  text?: string | null;
+  children?: React.ReactNode;
   textTransform?: string;
   className?: string;
 }
@@ -9,15 +9,15 @@ interface Props {
 export function TextNormalSans({
   tag = "div",
   color = "text-white",
-  text = null,
+  children = null,
   className = "",
 }: Props) {
   const Tag = tag;
 
   return (
-    text && (
+    children && (
       <Tag className={`text-base font-normal font-sans ${color} ${className}`}>
-        {text}
+        {children}
       </Tag>
     )
   );

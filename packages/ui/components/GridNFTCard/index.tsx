@@ -56,23 +56,23 @@ export function GridNFTCard() {
       <div className="md:basis-8/12">
         <TextSemiBoldSans
           tag="h2"
-          text="Discover More NFTs"
           className="text-lg md:text-[38px] mb-0 md:mb-4"
-        />
-        <TextNormalSans
-          tag="p"
-          text="Explore new trending NFTs"
-          className="text-normal md:text-[22px]"
-        />
+        >
+          Discover More NFTs
+        </TextSemiBoldSans>
+        <TextNormalSans tag="p" className="text-normal md:text-[22px]">
+          Explore new trending NFTs
+        </TextNormalSans>
       </div>
 
       <div className="max-md:order-last md:basis-4/12 md:flex md:justify-end">
         <Button
           icon={<EyeIcon />}
           theme={ButtonTheme.TRANSPARENT}
-          text="See All"
           classNames="w-full md:w-fit"
-        />
+        >
+          See All
+        </Button>
       </div>
 
       <div className="w-full">

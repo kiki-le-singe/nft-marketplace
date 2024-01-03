@@ -17,24 +17,22 @@ export function Footer() {
           <StorefrontIcon />
           <TextNormalMono
             tag="h2"
-            text="NFT Marketplace"
             fontWeight="font-semibold"
             fontSize="text-[22px]"
-          />
+          >
+            NFT Marketplace
+          </TextNormalMono>
         </div>
 
-        <TextNormalSans
-          text="This project is created/inspired by this Figma template https://www.figma.com/community/file/1173962104946517060."
-          color="text-[#CCC]"
-          className="text-base"
-        />
+        <TextNormalSans color="text-[#CCC]" className="text-base">
+          This project is created/inspired by this Figma template
+          https://www.figma.com/community/file/1173962104946517060.
+        </TextNormalSans>
 
         <div>
-          <TextNormalSans
-            text="Join my community :)"
-            color="text-[#CCC]"
-            className="text-base mb-2"
-          />
+          <TextNormalSans color="text-[#CCC]" className="text-base mb-2">
+            Join my community :)
+          </TextNormalSans>
 
           <ul className="flex gap-3">
             <li>

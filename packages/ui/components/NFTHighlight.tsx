@@ -15,53 +15,54 @@ export function NFTHighlight() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-y-7 md:gap-y-4">
           <div className="row-start-1">
-            <TextSemiBoldSans
-              tag="h2"
-              text="Magic Mashrooms"
-              className="text-[38px] leading-10"
-            />
+            <TextSemiBoldSans tag="h2" className="text-[38px] leading-10">
+              Magic Mashrooms
+            </TextSemiBoldSans>
           </div>
 
           <div className="col-span-1 md:row-span-2 row-start-2">
             <div className="md:flex md:justify-end md:items-end md:h-full">
               <div className="flex flex-col w-full gap-y-2 p-30px rounded-20px bg-black-transparent md:justify-center md:h-fit md:w-fit">
-                <TextNormalMono
-                  tag="p"
-                  text="Action ends in:"
-                  classNames="text-xs"
-                />
+                <TextNormalMono tag="p" classNames="text-xs">
+                  Action ends in:
+                </TextNormalMono>
 
                 <div className="flex flex-row gap-x-2">
                   <TextNormalMono
                     tag="span"
-                    text="59"
                     fontWeight="font-bold"
                     fontSize="text-4xl"
-                  />
+                  >
+                    59
+                  </TextNormalMono>
                   <TextNormalMono
                     tag="span"
-                    text=":"
                     fontWeight="font-bold"
                     fontSize="text-4xl"
-                  />
+                  >
+                    :
+                  </TextNormalMono>
                   <TextNormalMono
                     tag="span"
-                    text="59"
                     fontWeight="font-bold"
                     fontSize="text-4xl"
-                  />
+                  >
+                    59
+                  </TextNormalMono>
                   <TextNormalMono
                     tag="span"
-                    text=":"
                     fontWeight="font-bold"
                     fontSize="text-4xl"
-                  />
+                  >
+                    :
+                  </TextNormalMono>
                   <TextNormalMono
                     tag="span"
-                    text="59"
                     fontWeight="font-bold"
                     fontSize="text-4xl"
-                  />
+                  >
+                    59
+                  </TextNormalMono>
                 </div>
               </div>
             </div>
@@ -71,9 +72,10 @@ export function NFTHighlight() {
             <Button
               theme={ButtonTheme.WHITE}
               icon={<EyeIcon />}
-              text="See NFT"
               classNames="w-full md:w-fit"
-            />
+            >
+              See NFT
+            </Button>
           </div>
         </div>
       </div>

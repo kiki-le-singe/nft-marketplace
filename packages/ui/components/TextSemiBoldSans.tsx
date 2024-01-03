@@ -1,7 +1,7 @@
 interface Props {
   tag?: keyof JSX.IntrinsicElements;
   color?: string;
-  text?: string | null;
+  children?: React.ReactNode;
   textTransform?: string;
   className?: string;
 }
@@ -9,18 +9,18 @@ interface Props {
 export function TextSemiBoldSans({
   tag = "div",
   color = "text-white",
-  text = null,
+  children = null,
   textTransform = "normal-case",
   className = "",
 }: Props) {
   const Tag = tag;
 
   return (
-    text && (
+    children && (
       <Tag
         className={`font-semibold font-sans ${color} ${textTransform} ${className}`}
       >
-        {text}
+        {children}
       </Tag>
     )
   );

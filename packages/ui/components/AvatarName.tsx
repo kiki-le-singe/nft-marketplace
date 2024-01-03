@@ -25,13 +25,11 @@ export function AvatarName({ name, avatar, theme = "small" }: Props) {
       />
 
       {theme === "big" ? (
-        <TextSemiBoldSans
-          text={name}
-          textTransform="capitalize"
-          className="text-[22px]"
-        />
+        <TextSemiBoldSans textTransform="capitalize" className="text-[22px]">
+          {name}
+        </TextSemiBoldSans>
       ) : (
-        <TextNormalMono text={name} />
+        <TextNormalMono>{name}</TextNormalMono>
       )}
     </div>
   );

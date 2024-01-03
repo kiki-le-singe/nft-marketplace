@@ -41,23 +41,24 @@ export function NFTCard({
       <div className="pt-5 pb-[25px] px-30px">
         <TextSemiBoldSans
           tag="h5"
-          text={title}
           textTransform="capitalize"
           className="text-[22px] pb-1"
-        />
+        >
+          {title}
+        </TextSemiBoldSans>
         <div className="pb-6">
           <AvatarName avatar={avatar} name={name} />
         </div>
 
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
-            <TextXSNormalMono text="Price" />
-            <TextNormalMono text="1.63 ETH" />
+            <TextXSNormalMono>Price</TextXSNormalMono>
+            <TextNormalMono>1.63 ETH</TextNormalMono>
           </div>
 
           <div className="flex flex-col gap-2">
-            <TextXSNormalMono text="Highest Bid" />
-            <TextNormalMono text="0.33 wETH" />
+            <TextXSNormalMono>Highest Bid</TextXSNormalMono>
+            <TextNormalMono>0.33 wETH</TextNormalMono>
           </div>
         </div>
       </div>
