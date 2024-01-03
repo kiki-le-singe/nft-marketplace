@@ -44,6 +44,13 @@ export function GridCategoryCard() {
 
   return (
     <div className="w-full">
+      <TextSemiBoldSans
+        tag="h2"
+        className="text-lg md:text-[38px] mb-[40px] text-purple"
+      >
+        Browse Categories
+      </TextSemiBoldSans>
+
       <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 xs:gap-5 md:gap-7 lg:gap-y-7">
         {data.map((categoryCard: CategoryCardData, index) => (
           <li
