@@ -25,8 +25,22 @@ export function Footer() {
         </div>
 
         <TextNormalSans color="text-[#CCC]" className="text-base">
-          This project is created/inspired by this Figma template
-          https://www.figma.com/community/file/1173962104946517060.
+          This project is based and inspired by this Figma template:{` `}
+          <Link
+            href="https://www.figma.com/community/file/1173962104946517060"
+            target="_blank"
+            className="italic text-purple"
+          >
+            NFT Marketplace Template
+          </Link>{" "}
+          from{" "}
+          <Link
+            href="https://www.figma.com/@anima"
+            target="_blank"
+            className="italic text-purple"
+          >
+            Anima
+          </Link>
         </TextNormalSans>
 
         <div>
