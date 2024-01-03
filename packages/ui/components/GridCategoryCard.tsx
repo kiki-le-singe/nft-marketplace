@@ -1,4 +1,5 @@
 import { CategoryCard } from "./CategoryCard";
+import { TextSemiBoldSans } from "./TextSemiBoldSans";
 
 interface CategoryCardData {
   image: string;
@@ -8,19 +9,19 @@ interface CategoryCardData {
 export function GridCategoryCard() {
   const data: CategoryCardData[] = [
     {
-      image: "http://localhost:3002/images/elephant2.png",
+      image: "http://localhost:3002/images/guitar.png",
       title: "art",
     },
     {
-      image: "http://localhost:3002/images/cat.png",
+      image: "http://localhost:3002/images/key.png",
       title: "collectibles",
     },
     {
-      image: "http://localhost:3002/images/fox.png",
+      image: "http://localhost:3002/images/sports.png",
       title: "music",
     },
     {
-      image: "http://localhost:3002/images/crocodile2.png",
+      image: "http://localhost:3002/images/virtual_world.png",
       title: "photography",
     },
     {
