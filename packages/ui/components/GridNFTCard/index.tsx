@@ -16,7 +16,7 @@ interface NFTCardData {
 export function GridNFTCard() {
   const data: NFTCardData[] = [
     {
-      image: "http://localhost:3002/images/parrot.png",
+      image: "http://localhost:3002/images/kiwi-drinking.png",
       title: "foxy life",
       creator: {
         avatar: "http://localhost:3002/images/parrot.png",
@@ -24,7 +24,7 @@ export function GridNFTCard() {
       },
     },
     {
-      image: "http://localhost:3002/images/snail.png",
+      image: "http://localhost:3002/images/tree-apples.png",
       title: "cat from future",
       creator: {
         avatar: "http://localhost:3002/images/snail.png",
@@ -32,7 +32,7 @@ export function GridNFTCard() {
       },
     },
     {
-      image: "http://localhost:3002/images/tiger.png",
+      image: "http://localhost:3002/images/monkey-on-the-moon.png",
       title: "psycho dog",
       creator: {
         avatar: "http://localhost:3002/images/tiger.png",

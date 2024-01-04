@@ -9,7 +9,7 @@ interface CategoryCardData {
 export function GridCategoryCard() {
   const data: CategoryCardData[] = [
     {
-      image: "http://localhost:3002/images/guitar.png",
+      image: "http://localhost:3002/images/hyena2.png",
       title: "art",
     },
     {
@@ -25,19 +25,19 @@ export function GridCategoryCard() {
       title: "photography",
     },
     {
-      image: "http://localhost:3002/images/dog2.png",
+      image: "http://localhost:3002/images/tree-apples.png",
       title: "video",
     },
     {
-      image: "http://localhost:3002/images/hyena2.png",
+      image: "http://localhost:3002/images/parrot.png",
       title: "utility",
     },
     {
-      image: "http://localhost:3002/images/raccoon.png",
+      image: "http://localhost:3002/images/fruits-watermelon.png",
       title: "sport",
     },
     {
-      image: "http://localhost:3002/images/parrot.png",
+      image: "http://localhost:3002/images/kiwi-drinking.png",
       title: "virtual worlds",
     },
   ];
