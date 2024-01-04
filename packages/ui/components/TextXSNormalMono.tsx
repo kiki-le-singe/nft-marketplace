@@ -9,11 +9,11 @@ export function TextXSNormalMono({
   color = "text-[#858584]",
   children = null,
 }: Props) {
+  if (!children) return null;
+
   const Tag = tag;
 
   return (
-    children && (
-      <Tag className={`text-xs font-mono font-normal ${color}`}>{children}</Tag>
-    )
+    <Tag className={`text-xs font-mono font-normal ${color}`}>{children}</Tag>
   );
 }

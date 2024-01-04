@@ -13,15 +13,15 @@ export function TextSemiBoldSans({
   textTransform = "normal-case",
   className = "",
 }: Props) {
+  if (!children) return null;
+
   const Tag = tag;
 
   return (
-    children && (
-      <Tag
-        className={`font-semibold font-sans ${color} ${textTransform} ${className}`}
-      >
-        {children}
-      </Tag>
-    )
+    <Tag
+      className={`font-semibold font-sans ${color} ${textTransform} ${className}`}
+    >
+      {children}
+    </Tag>
   );
 }

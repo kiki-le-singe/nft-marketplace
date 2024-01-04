@@ -17,8 +17,10 @@ export function TextNormalMono({
   children = null,
   classNames = "",
 }: Props) {
+  if (!children) return null;
+
   const Tag = tag;
   const className = clsx("font-mono", fontWeight, color, fontSize, classNames);
 
-  return children && <Tag className={className}>{children}</Tag>;
+  return <Tag className={className}>{children}</Tag>;
 }

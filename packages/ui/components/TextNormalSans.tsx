@@ -12,13 +12,13 @@ export function TextNormalSans({
   children = null,
   className = "",
 }: Props) {
+  if (!children) return null;
+
   const Tag = tag;
 
   return (
-    children && (
-      <Tag className={`text-base font-normal font-sans ${color} ${className}`}>
-        {children}
-      </Tag>
-    )
+    <Tag className={`text-base font-normal font-sans ${color} ${className}`}>
+      {children}
+    </Tag>
   );
 }
