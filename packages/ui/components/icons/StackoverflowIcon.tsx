@@ -15,9 +15,9 @@ export default function StackoverflowIcon({ className = "" }: Props) {
       <g
         id="Icons"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <g id="Color-" transform="translate(-807.000000, -952.000000)">
           <g id="stackoverflow" transform="translate(807.000000, 952.000000)">
