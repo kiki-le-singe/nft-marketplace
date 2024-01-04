@@ -9,7 +9,7 @@ import {
 
 export default function Page() {
   return (
-    <div className="flex flex-col gap-y-12 md:gap-y-16 lg:gap-y-20 w-full py-10">
+    <div className="flex flex-col gap-y-12 md:gap-y-16 lg:gap-y-20 w-full py-10 md:py-20">
       <SectionsContainer>
         <GridArtistCard />
         <GridCategoryCard />
