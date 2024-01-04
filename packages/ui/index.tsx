@@ -16,3 +16,4 @@ export * from "./components/icons/EyeIcon";
 export * from "./components/NFTHighlight";
 export * from "./components/HowItWorks";
 export * from "./components/Footer";
+export * from "./components/SectionsContainer";
