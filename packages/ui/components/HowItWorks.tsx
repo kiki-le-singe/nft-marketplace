@@ -10,7 +10,8 @@ export function HowItWorks() {
       <div className="md:basis-8/12">
         <TextSemiBoldSans
           tag="h2"
-          className="text-lg md:text-[38px] mb-0 md:mb-4 text-purple"
+          color="text-purple"
+          className="text-lg md:text-[38px] mb-0 md:mb-4"
         >
           How it works
         </TextSemiBoldSans>
