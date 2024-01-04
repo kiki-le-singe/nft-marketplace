@@ -49,12 +49,12 @@ export function Footer() {
           </TextNormalSans>
 
           <ul className="flex gap-3">
-            <li>
+            <li className="custom-animation-scale">
               <Link href="https://github.com/kiki-le-singe" target="_blank">
                 <GithubIcon />
               </Link>
             </li>
-            <li>
+            <li className="custom-animation-scale">
               <Link
                 href="https://www.instagram.com/boopykiki.dev"
                 target="_blank"
@@ -62,7 +62,7 @@ export function Footer() {
                 <InstagramIcon />
               </Link>
             </li>
-            <li>
+            <li className="custom-animation-scale">
               <Link
                 href="https://medium.com/@aalbertini95_90842"
                 target="_blank"
@@ -70,7 +70,7 @@ export function Footer() {
                 <MediumIcon />
               </Link>
             </li>
-            <li>
+            <li className="custom-animation-scale">
               <Link
                 href="https://stackoverflow.com/users/4780245/boopy"
                 target="_blank"
@@ -78,7 +78,7 @@ export function Footer() {
                 <StackoverflowIcon />
               </Link>
             </li>
-            <li>
+            <li className="custom-animation-scale">
               <Link href="https://twitter.com/kiki_le_singe" target="_blank">
                 <TwitterIcon />
               </Link>
