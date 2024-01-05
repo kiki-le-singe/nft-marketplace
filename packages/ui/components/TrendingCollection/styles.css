@@ -1,0 +1,16 @@
+/*
+There are 3 displayed items in the grid. 
+The first 1 is always visible, the second is is visible for medium screens and the third for large screens.
+*/
+ul.grid-trending-collection li {
+  @apply hidden;
+}
+ul.grid-trending-collection li:first-child {
+  @apply block;
+}
+ul.grid-trending-collection li:nth-child(2) {
+  @apply md:block;
+}
+ul.grid-trending-collection li:nth-child(3) {
+  @apply lg:block;
+}

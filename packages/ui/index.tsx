@@ -17,3 +17,4 @@ export * from "./components/NFTHighlight";
 export * from "./components/HowItWorks";
 export * from "./components/Footer";
 export * from "./components/SectionsContainer";
+export * from "./components/TrendingCollection";
