@@ -29,6 +29,7 @@ const config: Config = {
         xxs: "320px",
         xs: "375px",
         sm: "425px",
+        ["4k"]: "2560px",
       },
       spacing: {
         "30px": "1.875rem",
