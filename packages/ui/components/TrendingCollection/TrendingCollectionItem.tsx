@@ -22,8 +22,8 @@ export function TrendingCollectionItem({ image, images }: Props) {
         />
       </div>
 
-      <div className="flex justify-between h-[92px] xs:h-[100px] sm:h-[100px] lg:h-[86px] xl:h-[92px] 2xl:h-[115px] 4k:h-[170px]">
-        <div className="flex w-[92px] xs:w-[100px] sm:w-[105px] md:w-[100px] lg:w-[86px] xl:w-[92px] 2xl:w-[115px] 4k:w-[170px] relative h-full rounded-20px overflow-hidden custom-animation-scale">
+      <div className="flex gap-3 justify-between h-[92px] xs:h-[100px] sm:h-[100px] lg:h-[86px] xl:h-[92px] 2xl:h-[115px] 4k:h-[170px]">
+        <div className="flex flex-1 relative h-full rounded-20px overflow-hidden custom-animation-scale">
           <Image
             src={images[0]}
             alt="Picture of the Trending"
@@ -32,7 +32,7 @@ export function TrendingCollectionItem({ image, images }: Props) {
             fill
           />
         </div>
-        <div className="flex w-[92px] xs:w-[100px] sm:w-[105px] md:w-[100px] lg:w-[86px] xl:w-[92px] 2xl:w-[115px] 4k:w-[170px] relative h-full rounded-20px overflow-hidden custom-animation-scale">
+        <div className="flex flex-1 relative h-full rounded-20px overflow-hidden custom-animation-scale">
           <Image
             src={images[1]}
             alt="Picture of the Trending"
@@ -42,7 +42,7 @@ export function TrendingCollectionItem({ image, images }: Props) {
           />
         </div>
 
-        <div className="flex w-[92px] xs:w-[100px] sm:w-[105px] md:w-[100px] lg:w-[86px] xl:w-[92px] 2xl:w-[115px] 4k:w-[170px] items-center justify-center bg-purple h-full rounded-20px custom-animation-scale">
+        <div className="flex flex-1 items-center justify-center bg-purple h-full rounded-20px custom-animation-scale">
           <TextNormalMono fontSize="text-[22px]" fontWeight="font-bold">
             1025+
           </TextNormalMono>
