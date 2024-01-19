@@ -19,6 +19,7 @@ export function TrendingCollectionItem({ image, images }: Props) {
           sizes="630px"
           className="object-cover"
           fill
+          priority
         />
       </div>
 

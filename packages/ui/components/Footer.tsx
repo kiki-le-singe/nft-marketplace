@@ -1,7 +1,4 @@
-import { TextSemiBoldSans } from "./TextSemiBoldSans";
 import { TextNormalSans } from "./TextNormalSans";
-import { TextNormalMono } from "./TextNormalMono";
-import StorefrontIcon from "./icons/StorefrontIcon";
 import GithubIcon from "./icons/GithubIcon";
 import InstagramIcon from "./icons/InstagramIcon";
 import MediumIcon from "./icons/MediumIcon";
@@ -9,20 +6,13 @@ import StackoverflowIcon from "./icons/StackoverflowIcon";
 import TwitterIcon from "./icons/TwitterIcon";
 import Link from "next/link";
 
+import { Logo } from "./Logo";
+
 export function Footer() {
   return (
     <footer className="flex flex-col py-10 max-md:py-8 xxs:px-2 xs:px-5 sm:px-10 lg:px-[5vw] xl:px-[15vw] 2xl:px-[15vw] gap-y-10 md:gap-y-14 lg:gap-y-20 w-full bg-dark-gray">
       <div className="flex flex-col gap-5">
-        <div className="flex items-center gap-2.5">
-          <StorefrontIcon />
-          <TextNormalMono
-            tag="h2"
-            fontWeight="font-semibold"
-            fontSize="text-[22px]"
-          >
-            NFT Marketplace
-          </TextNormalMono>
-        </div>
+        <Logo />
 
         <TextNormalSans color="text-[#CCC]" className="text-base">
           This project is based and inspired by this Figma template:{` `}
