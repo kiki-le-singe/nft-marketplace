@@ -12,6 +12,13 @@
   src: url("../stories/assets/_fonts/SpaceMono-Regular.ttf") format("ttf");
 }
 
+@layer base {
+  body:has(dialog[open]),
+  body:has(.menu-mobile-open) {
+    overflow: hidden;
+  }
+}
+
 :root {
   --font-work-sans: "WorkSans-Regular", sans-serif;
   --font-space-mono: "SpaceMono-Regular", sans-serif;
