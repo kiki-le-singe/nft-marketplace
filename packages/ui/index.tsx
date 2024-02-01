@@ -19,3 +19,6 @@ export * from "./components/Footer";
 export * from "./components/SectionsContainer";
 export * from "./components/TrendingCollection";
 export * from "./components/Header";
+
+// utils exports
+export * from "./utils/cn";
