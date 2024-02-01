@@ -50,8 +50,7 @@ export function TrendingCollection() {
       <div>
         <TextSemiBoldSans
           tag="h2"
-          color="text-purple"
-          className="text-lg md:text-[38px] mb-0 md:mb-4"
+          className="text-lg md:text-[38px] mb-0 md:mb-4 text-purple"
         >
           Trending Collection
         </TextSemiBoldSans>

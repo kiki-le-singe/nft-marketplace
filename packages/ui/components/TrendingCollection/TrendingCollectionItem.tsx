@@ -44,7 +44,7 @@ export function TrendingCollectionItem({ image, images }: Props) {
         </div>
 
         <div className="flex flex-1 items-center justify-center bg-purple h-full rounded-20px custom-animation-scale">
-          <TextNormalMono fontSize="text-[22px]" fontWeight="font-bold">
+          <TextNormalMono className="text-[22px] font-bold">
             1025+
           </TextNormalMono>
         </div>

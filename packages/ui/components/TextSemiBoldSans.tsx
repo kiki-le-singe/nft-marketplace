@@ -1,16 +1,14 @@
+import { cn } from "../utils/cn";
+
 interface Props {
   tag?: keyof JSX.IntrinsicElements;
-  color?: string;
   children?: React.ReactNode;
-  textTransform?: string;
   className?: string;
 }
 
 export function TextSemiBoldSans({
   tag = "div",
-  color = "text-white",
   children = null,
-  textTransform = "normal-case",
   className = "",
 }: Props) {
   if (!children) return null;
@@ -19,7 +17,10 @@ export function TextSemiBoldSans({
 
   return (
     <Tag
-      className={`font-semibold font-sans ${color} ${textTransform} ${className}`}
+      className={cn(
+        `font-semibold font-sans text-white normal-case`,
+        className
+      )}
     >
       {children}
     </Tag>

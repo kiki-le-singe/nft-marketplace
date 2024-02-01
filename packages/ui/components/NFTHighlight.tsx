@@ -23,44 +23,24 @@ export function NFTHighlight() {
           <div className="col-span-1 md:row-span-2 row-start-2">
             <div className="md:flex md:justify-end md:items-end md:h-full">
               <div className="flex flex-col w-full gap-y-2 p-30px rounded-20px bg-black-transparent md:justify-center md:h-fit md:w-fit">
-                <TextNormalMono tag="p" classNames="text-xs">
+                <TextNormalMono tag="p" className="text-xs">
                   Action ends in:
                 </TextNormalMono>
 
                 <div className="flex flex-row gap-x-2">
-                  <TextNormalMono
-                    tag="span"
-                    fontWeight="font-bold"
-                    fontSize="text-4xl"
-                  >
+                  <TextNormalMono tag="span" className="font-bold text-4xl">
                     59
                   </TextNormalMono>
-                  <TextNormalMono
-                    tag="span"
-                    fontWeight="font-bold"
-                    fontSize="text-4xl"
-                  >
+                  <TextNormalMono tag="span" className="font-bold text-4xl">
                     :
                   </TextNormalMono>
-                  <TextNormalMono
-                    tag="span"
-                    fontWeight="font-bold"
-                    fontSize="text-4xl"
-                  >
+                  <TextNormalMono tag="span" className="font-bold text-4xl">
                     59
                   </TextNormalMono>
-                  <TextNormalMono
-                    tag="span"
-                    fontWeight="font-bold"
-                    fontSize="text-4xl"
-                  >
+                  <TextNormalMono tag="span" className="font-bold text-4xl">
                     :
                   </TextNormalMono>
-                  <TextNormalMono
-                    tag="span"
-                    fontWeight="font-bold"
-                    fontSize="text-4xl"
-                  >
+                  <TextNormalMono tag="span" className="font-bold text-4xl">
                     59
                   </TextNormalMono>
                 </div>

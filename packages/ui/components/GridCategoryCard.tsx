@@ -46,8 +46,7 @@ export function GridCategoryCard() {
     <section className="w-full">
       <TextSemiBoldSans
         tag="h2"
-        color="text-purple"
-        className="text-lg md:text-[38px] mb-6 md:mb-[40px]"
+        className="text-lg md:text-[38px] mb-6 md:mb-[40px] text-purple"
       >
         Browse Categories
       </TextSemiBoldSans>

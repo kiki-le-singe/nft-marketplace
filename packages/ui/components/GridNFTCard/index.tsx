@@ -56,8 +56,7 @@ export function GridNFTCard() {
       <div className="md:basis-8/12">
         <TextSemiBoldSans
           tag="h2"
-          color="text-purple"
-          className="text-lg md:text-[38px] mb-0 md:mb-4"
+          className="text-lg md:text-[38px] mb-0 md:mb-4 text-purple"
         >
           Discover More NFTs
         </TextSemiBoldSans>

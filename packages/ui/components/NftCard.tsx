@@ -39,11 +39,7 @@ export function NFTCard({
       </div>
 
       <div className="pt-5 pb-[25px] px-30px">
-        <TextSemiBoldSans
-          tag="h5"
-          textTransform="capitalize"
-          className="text-[22px] pb-1"
-        >
+        <TextSemiBoldSans tag="h5" className="text-[22px] pb-1 capitalize">
           {title}
         </TextSemiBoldSans>
         <div className="pb-6">

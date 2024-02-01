@@ -1,26 +1,25 @@
-import clsx from "clsx";
+import { cn } from "../utils/cn";
 
 interface Props {
   tag?: keyof JSX.IntrinsicElements;
-  color?: string;
-  fontWeight?: string;
-  fontSize?: string;
   children?: React.ReactNode;
-  classNames?: string;
+  className?: string;
 }
 
 export function TextNormalMono({
   tag = "div",
-  color = "text-white",
-  fontWeight = "font-normal",
-  fontSize = "text-base",
   children = null,
-  classNames = "",
+  className = "",
 }: Props) {
   if (!children) return null;
 
   const Tag = tag;
-  const className = clsx("font-mono", fontWeight, color, fontSize, classNames);
 
-  return <Tag className={className}>{children}</Tag>;
+  return (
+    <Tag
+      className={cn("font-mono text-white font-normal text-base", className)}
+    >
+      {children}
+    </Tag>
+  );
 }
