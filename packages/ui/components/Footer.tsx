@@ -14,7 +14,7 @@ export function Footer() {
       <div className="flex flex-col gap-5">
         <Logo />
 
-        <TextNormalSans color="text-[#CCC]" className="text-base">
+        <TextNormalSans className="text-[#CCC] text-base">
           This project is based and inspired by this Figma template:{` `}
           <Link
             href="https://www.figma.com/community/file/1173962104946517060"
@@ -34,7 +34,7 @@ export function Footer() {
         </TextNormalSans>
 
         <div>
-          <TextNormalSans color="text-[#CCC]" className="text-base mb-2">
+          <TextNormalSans className="text-[#CCC] text-base mb-2">
             Join my community :)
           </TextNormalSans>
 

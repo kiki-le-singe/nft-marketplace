@@ -62,7 +62,7 @@ export function GridNFTCard() {
           Discover More NFTs
         </TextSemiBoldSans>
 
-        <TextNormalSans tag="p" className="text-normal md:text-[22px]">
+        <TextNormalSans tag="p" className="md:text-[22px]">
           Explore new trending NFTs
         </TextNormalSans>
       </div>

@@ -1,6 +1,7 @@
+import { cn } from "../utils/cn";
+
 interface Props {
   tag?: keyof JSX.IntrinsicElements;
-  color?: string;
   children?: React.ReactNode;
   textTransform?: string;
   className?: string;
@@ -8,7 +9,6 @@ interface Props {
 
 export function TextNormalSans({
   tag = "div",
-  color = "text-white",
   children = null,
   className = "",
 }: Props) {
@@ -17,7 +17,9 @@ export function TextNormalSans({
   const Tag = tag;
 
   return (
-    <Tag className={`text-base font-normal font-sans ${color} ${className}`}>
+    <Tag
+      className={cn(`text-base font-normal font-sans text-white`, className)}
+    >
       {children}
     </Tag>
   );

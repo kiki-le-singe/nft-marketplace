@@ -74,7 +74,7 @@ export function GridArtistCard() {
         >
           Top creators
         </TextSemiBoldSans>
-        <TextNormalSans tag="p" className="text-normal md:text-[22px]">
+        <TextNormalSans tag="p" className="md:text-[22px]">
           Checkout Top Rated Creators on the NFT Marketplace
         </TextNormalSans>
       </div>

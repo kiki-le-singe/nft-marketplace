@@ -16,7 +16,7 @@ export function HowItWorks() {
           How it works
         </TextSemiBoldSans>
 
-        <TextNormalSans tag="p" className="text-normal md:text-[22px]">
+        <TextNormalSans tag="p" className="md:text-[22px]">
           Find out how to get started
         </TextNormalSans>
       </div>

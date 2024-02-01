@@ -33,7 +33,7 @@ export function ArtistCard({ creator }: Props) {
           {name}
         </TextSemiBoldSans>
         <div className="flex gap-1.5">
-          <TextNormalSans color="text-gray">Total Sales: </TextNormalSans>
+          <TextNormalSans className="text-gray">Total Sales:</TextNormalSans>
           <TextNormalMono>34.53 ETH</TextNormalMono>
         </div>
       </div>

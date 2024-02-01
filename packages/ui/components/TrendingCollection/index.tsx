@@ -56,7 +56,7 @@ export function TrendingCollection() {
           Trending Collection
         </TextSemiBoldSans>
 
-        <TextNormalSans tag="p" className="text-normal md:text-[22px]">
+        <TextNormalSans tag="p" className="md:text-[22px]">
           Checkout our weekly updated trending collection.
         </TextNormalSans>
       </div>
