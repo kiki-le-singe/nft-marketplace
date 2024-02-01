@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "clsx": "^2.0.0",
-    "next": "^14.0.3"
+    "next": "^14.0.3",
+    "tailwind-merge": "^2.2.1"
   }
 }
