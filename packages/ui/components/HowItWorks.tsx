@@ -6,7 +6,7 @@ import InfoIcon3 from "./icons/InfoIcon3";
 
 export function HowItWorks() {
   return (
-    <div className="flex flex-col gap-y-6 md:gap-y-10">
+    <section className="flex flex-col gap-y-6 md:gap-y-10">
       <div className="md:basis-8/12">
         <TextSemiBoldSans
           tag="h2"
@@ -70,6 +70,6 @@ export function HowItWorks() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

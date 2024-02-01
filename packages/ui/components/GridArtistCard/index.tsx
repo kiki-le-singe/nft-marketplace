@@ -65,7 +65,7 @@ export function GridArtistCard() {
   ];
 
   return (
-    <div className="flex flex-col gap-y-6 md:gap-y-10 md:items-end md:flex-row md:flex-wrap">
+    <section className="flex flex-col gap-y-6 md:gap-y-10 md:items-end md:flex-row md:flex-wrap">
       <div className="md:basis-8/12">
         <TextSemiBoldSans
           tag="h2"
@@ -104,6 +104,6 @@ export function GridArtistCard() {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 }

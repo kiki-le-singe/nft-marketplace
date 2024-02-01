@@ -43,7 +43,7 @@ export function GridCategoryCard() {
   ];
 
   return (
-    <div className="w-full">
+    <section className="w-full">
       <TextSemiBoldSans
         tag="h2"
         color="text-purple"
@@ -62,6 +62,6 @@ export function GridCategoryCard() {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }

@@ -46,7 +46,7 @@ export function TrendingCollection() {
   ];
 
   return (
-    <div className="w-full flex flex-col gap-y-6 md:gap-y-10">
+    <section className="w-full flex flex-col gap-y-6 md:gap-y-10">
       <div>
         <TextSemiBoldSans
           tag="h2"
@@ -68,6 +68,6 @@ export function TrendingCollection() {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
