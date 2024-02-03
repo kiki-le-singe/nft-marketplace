@@ -8,6 +8,7 @@ import { Button } from "./Button";
 import { useState } from "react";
 import BurgerMenuIcon from "./icons/BurgerMenuIcon";
 import { MobileMenu } from "./MobileMenu";
+import { AnimatePresence } from "framer-motion";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +50,7 @@ export function Header() {
 
           <button
             type="button"
-            className="flex items-center"
+            className="custom-animation-scale flex items-center"
             onClick={handleClick}
             aria-label={ariaLabel}
           >
@@ -58,7 +59,9 @@ export function Header() {
         </div>
       </div>
 
-      {isOpen && <MobileMenu />}
+      <AnimatePresence>
+        {isOpen ? <MobileMenu key="dialog" /> : null}
+      </AnimatePresence>
     </header>
   );
 }
