@@ -54,7 +54,10 @@ export function Header() {
             onClick={handleClick}
             aria-label={ariaLabel}
           >
-            <BurgerMenuIcon className="block cursor-pointer lg:hidden" />
+            <BurgerMenuIcon
+              isActive={isOpen}
+              className="block cursor-pointer lg:hidden"
+            />
           </button>
         </div>
       </div>
