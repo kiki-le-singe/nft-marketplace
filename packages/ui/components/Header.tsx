@@ -1,19 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 import { Logo } from "./Logo";
 import { TextNormalSans } from "./TextNormalSans";
 import { Button } from "./Button";
 import { useState } from "react";
 import BurgerMenuIcon from "./icons/BurgerMenuIcon";
-import { MobileMenu } from "./MobileMenu";
 import { AnimatePresence } from "framer-motion";
+import { Loading } from "./Loading";
+
+const DynamicMobileMenu = dynamic(() => import("./MobileMenu"), {
+  loading: () => <Loading />,
+});
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const ariaLabel = isOpen ? "aria-close-menu-panel" : "aria-open-menu-panel";
+  const ariaLabel = isOpen ? "Close menu" : "Open menu";
 
   function handleClick() {
     setIsOpen(!isOpen);
@@ -62,9 +67,7 @@ export function Header() {
         </div>
       </div>
 
-      <AnimatePresence>
-        {isOpen ? <MobileMenu key="dialog" /> : null}
-      </AnimatePresence>
+      <AnimatePresence>{isOpen ? <DynamicMobileMenu /> : null}</AnimatePresence>
     </header>
   );
 }

@@ -5,12 +5,6 @@ import { TextNormalSans } from "./TextNormalSans";
 import { Button } from "./Button";
 import { useEffect } from "react";
 
-// @TODO:
-// - Add animation with framer-motion
-// https://www.framer.com/motion/examples/
-// https://codesandbox.io/p/sandbox/framer-motion-side-menu-mx2rw?file=%2Fsrc%2FMenuItem.tsx%3A9%2C31&from-embed=
-// https://codesandbox.io/p/sandbox/framer-motion-variants-rj7ks0?file=%2Fsrc%2FApp.tsx%3A42%2C2-61%2C11&from-embed=
-
 const containerVariants = {
   visible: {
     opacity: 1,
@@ -74,7 +68,7 @@ const buttonVariants = {
   },
 };
 
-export function MobileMenu() {
+export default function MobileMenu() {
   const [isPresent, safeToRemove] = usePresence();
 
   useEffect(() => {
