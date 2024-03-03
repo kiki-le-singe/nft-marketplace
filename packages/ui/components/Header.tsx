@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import { Logo } from "./Logo";
 import { TextNormalSans } from "./TextNormalSans";
@@ -17,6 +18,9 @@ const DynamicMobileMenu = dynamic(() => import("./MobileMenu"), {
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { scrollY } = useScroll();
+  const headerY = useTransform(scrollY, [0, 50], [0, -100]);
+  const headerOpacity = useTransform(scrollY, [0, 50], [1, 0]);
 
   const ariaLabel = isOpen ? "Close menu" : "Open menu";
 
@@ -25,7 +29,13 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-black py-[15px] px-30px lg:px-[50px] lg:py-5">
+    <motion.header
+      className="sticky top-0 z-50 bg-black py-[15px] px-30px lg:px-[50px] lg:py-5"
+      style={{
+        opacity: headerOpacity,
+        y: headerY,
+      }}
+    >
       <div className="flex justify-between items-center">
         <Logo fontSize="text-base" />
 
@@ -68,6 +78,6 @@ export function Header() {
       </div>
 
       <AnimatePresence>{isOpen ? <DynamicMobileMenu /> : null}</AnimatePresence>
-    </header>
+    </motion.header>
   );
 }
