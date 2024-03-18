@@ -2,7 +2,13 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useAnimate,
+  useMotionValue,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 
 import { Logo } from "./Logo";
 import { TextNormalSans } from "./TextNormalSans";
@@ -19,10 +25,35 @@ const DynamicMobileMenu = dynamic(() => import("./MobileMenu"), {
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useScroll();
-  const headerY = useTransform(scrollY, [0, 50], [0, -100]);
-  const headerOpacity = useTransform(scrollY, [0, 50], [1, 0]);
+  const [scope, animate] = useAnimate();
+  const latestScrollY = useMotionValue(0);
 
   const ariaLabel = isOpen ? "Close menu" : "Open menu";
+
+  useMotionValueEvent(scrollY, "change", async (latest) => {
+    if (isOpen) return;
+
+    const baseAnimationConfig = {
+      backgroundColor: "rgba(43, 43, 43, 1)",
+    };
+
+    if (latest <= 0) {
+      await animate(scope.current, baseAnimationConfig);
+    } else {
+      let intermediateAnimationConfig = {
+        ...baseAnimationConfig,
+        backgroundColor: "rgba(43, 43, 43, 0.5)",
+      };
+
+      await animate(scope.current, intermediateAnimationConfig);
+
+      // when the scroll is done we reset the background color
+      await animate(scope.current, baseAnimationConfig);
+    }
+
+    // Set the latest scroll position
+    latestScrollY.set(latest);
+  });
 
   function handleClick() {
     setIsOpen(!isOpen);
@@ -31,10 +62,7 @@ export function Header() {
   return (
     <motion.header
       className="sticky top-0 z-50 bg-black py-[15px] px-30px lg:px-[50px] lg:py-5"
-      style={{
-        opacity: headerOpacity,
-        y: headerY,
-      }}
+      ref={scope}
     >
       <div className="flex justify-between items-center">
         <Logo fontSize="text-base" />
