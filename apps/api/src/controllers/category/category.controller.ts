@@ -10,6 +10,25 @@ export class CategoryController {
     return this.categoryService.getCategories({});
   }
 
+  @Get('trending')
+  getTrendingCateogry() {
+    return this.categoryService.getCategories({
+      take: 3,
+      select: {
+        id: true,
+        title: true,
+        creations: {
+          take: 3,
+          select: {
+            id: true,
+            title: true,
+            image: true,
+          },
+        },
+      },
+    });
+  }
+
   @Get('/:id')
   getCategoryById(@Param('id') id: string) {
     return this.categoryService.getCategory(
