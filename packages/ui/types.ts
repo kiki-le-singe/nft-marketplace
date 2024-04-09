@@ -8,7 +8,6 @@ export interface CreatorData {
   name: string;
 }
 export interface TrendingCollectionData {
-  image: string;
   images: Array<string>;
   title: string;
   creator: CreatorData;

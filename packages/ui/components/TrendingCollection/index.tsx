@@ -8,8 +8,8 @@ import "./styles.css";
 export function TrendingCollection() {
   const data: TrendingCollectionData[] = [
     {
-      image: "http://localhost:3002/images/fruits-watermelon.png",
       images: [
+        "http://localhost:3002/images/fruits-watermelon.png",
         "http://localhost:3002/images/human-earth.WEBP",
         "http://localhost:3002/images/sun-earth.WEBP",
       ],
@@ -20,8 +20,8 @@ export function TrendingCollection() {
       },
     },
     {
-      image: "http://localhost:3002/images/monkey-on-the-moon-2.png",
       images: [
+        "http://localhost:3002/images/monkey-on-the-moon-2.png",
         "http://localhost:3002/images/dinosaures.WEBP",
         "http://localhost:3002/images/music.WEBP",
       ],
@@ -32,8 +32,8 @@ export function TrendingCollection() {
       },
     },
     {
-      image: "http://localhost:3002/images/orange-small-world.png",
       images: [
+        "http://localhost:3002/images/orange-small-world.png",
         "http://localhost:3002/images/duck-flute.WEBP",
         "http://localhost:3002/images/human-earth2.WEBP",
       ],
