@@ -13,17 +13,25 @@ export class CategoryService {
     where?: Prisma.CategoryWhereInput;
     orderBy?: Prisma.CategoryOrderByWithRelationInput;
     include?: Prisma.CategoryInclude;
+    select?: Prisma.CategorySelect;
   }): Promise<Category[]> {
-    const { skip, take, cursor, where, orderBy, include } = params;
+    const { skip, take, cursor, where, orderBy, include, select } = params;
 
-    return this.prisma.category.findMany({
+    const queryOptions: Prisma.CategoryFindManyArgs = {
       skip,
       take,
       cursor,
       where,
       orderBy,
-      include,
-    });
+    };
+
+    if (select) {
+      queryOptions.select = select;
+    } else if (include) {
+      queryOptions.include = include;
+    }
+
+    return this.prisma.category.findMany(queryOptions);
   }
 
   async getCategory(
@@ -33,11 +41,18 @@ export class CategoryService {
       select?: Prisma.CategorySelect;
     } = {},
   ): Promise<Category | null> {
-    const { include } = params;
+    const { include, select } = params;
 
-    return this.prisma.category.findUnique({
+    const queryOptions: Prisma.CategoryFindUniqueArgs = {
       where: categoryWhereUniqueInput,
-      include,
-    });
+    };
+
+    if (select) {
+      queryOptions.select = select;
+    } else if (include) {
+      queryOptions.include = include;
+    }
+
+    return this.prisma.category.findUnique(queryOptions);
   }
 }
