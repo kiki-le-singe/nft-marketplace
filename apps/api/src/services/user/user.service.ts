@@ -33,7 +33,7 @@ export class UserService {
     params: {
       include?: Prisma.UserInclude;
       select?: UserSelect;
-    },
+    } = {},
   ): Promise<User | null> {
     const { include } = params;
 

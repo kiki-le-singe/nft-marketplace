@@ -31,7 +31,7 @@ export class CategoryService {
     params: {
       include?: Prisma.CategoryInclude;
       select?: Prisma.CategorySelect;
-    },
+    } = {},
   ): Promise<Category | null> {
     const { include } = params;
 
