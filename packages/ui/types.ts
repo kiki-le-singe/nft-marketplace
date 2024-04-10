@@ -7,8 +7,20 @@ export interface CreatorData {
   avatar: string;
   name: string;
 }
-export interface TrendingCollectionData {
-  images: Array<string>;
+export interface CreationData {
+  id: number;
+  createdAt: string;
   title: string;
-  creator: CreatorData;
+  description: string;
+  published: boolean;
+  creatorId: number;
+  image: string;
+}
+
+type CreationSubset = Pick<CreationData, "id" | "title" | "image">;
+
+export interface TrendingCollectionData {
+  id: number;
+  title: string;
+  creations: CreationSubset[];
 }
