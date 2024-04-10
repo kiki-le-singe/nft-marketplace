@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: "WorkSans-Regular";
-  src: url("../stories/assets/_fonts/WorkSans-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/WorkSans-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "SpaceMono-Regular";
-  src: url("../stories/assets/_fonts/SpaceMono-Regular.ttf") format("ttf");
+  src: url("../assets/fonts/SpaceMono-Regular.ttf") format("ttf");
 }
 
 @layer base {
