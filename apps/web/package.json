@@ -16,7 +16,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind-merge": "^2.2.1",
-    "ui": "workspace:*"
+    "ui": "workspace:*",
+    "lib": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",

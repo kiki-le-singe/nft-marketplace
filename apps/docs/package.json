@@ -16,7 +16,8 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1",
     "next": "14.1.4",
-    "ui": "workspace:*"
+    "ui": "workspace:*",
+    "lib": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5",
