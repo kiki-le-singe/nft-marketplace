@@ -1,6 +1,10 @@
-module.exports = {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   content: [
-    "./stories/**/*.{js,jsx,ts,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 
     // include packages if not transpiling
     "../../packages/ui/components/**/*.{js,ts,jsx,tsx}",
@@ -34,3 +38,4 @@ module.exports = {
   },
   plugins: [],
 };
+export default config;

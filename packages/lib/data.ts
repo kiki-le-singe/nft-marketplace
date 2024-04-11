@@ -1,9 +1,8 @@
 import { TrendingCollectionData } from "../ui/types";
-import { API_URL } from "../config/env";
 
 export async function fetchTrendingData(): Promise<TrendingCollectionData[]> {
   try {
-    const res = await fetch(`${API_URL}/categories/trending`);
+    const res = await fetch(`${process.env.API_URL}/categories/trending`);
 
     if (!res.ok) {
       return [];

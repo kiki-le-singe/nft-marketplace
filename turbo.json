@@ -1,4 +1,8 @@
 {
+  "globalEnv": [
+    "API_URL",
+    "IMG_URL"
+  ],
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": [
     "**/.env.*local"
