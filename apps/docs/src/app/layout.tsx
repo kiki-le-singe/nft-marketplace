@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
-import "./globals.css";
+import "ui/styles/globals.css";
 import { Footer, Header } from "ui";
 
 // Font files can be colocated inside of `app`
