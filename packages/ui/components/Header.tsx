@@ -68,7 +68,7 @@ export function Header() {
         <Logo fontSize="text-base" />
 
         <div>
-          <nav className="flex hidden lg:block">
+          <nav className="hidden lg:block">
             <ul className="flex justify-center items-center gap-2.5">
               <li className="custom-animation-scale px-5">
                 <Link href="/">
