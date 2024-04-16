@@ -24,10 +24,13 @@ export default function BurgerMenuIcon({
           strokeWidth="3"
           stroke="white"
           strokeLinecap="round"
+          d="M 2 2.5 L 20 2.5"
           variants={{
             inactive: { d: "M 2 2.5 L 20 2.5" },
             active: { d: "M 3 16.5 L 17 2.5" },
           }}
+          initial="inactive" // Explicit initial state
+          animate={isActive ? "active" : "inactive"}
         />
         <motion.path
           id="Vector (Stroke)_2"
@@ -40,16 +43,21 @@ export default function BurgerMenuIcon({
             active: { opacity: 0 },
           }}
           transition={{ duration: 0.1 }}
+          initial="inactive"
+          animate={isActive ? "active" : "inactive"}
         />
         <motion.path
           id="Vector (Stroke)_3"
           strokeWidth="3"
           stroke="white"
           strokeLinecap="round"
+          d="M 2 16.346 L 20 16.346"
           variants={{
             inactive: { d: "M 2 16.346 L 20 16.346" },
             active: { d: "M 3 2.5 L 17 16.346" },
           }}
+          initial="inactive"
+          animate={isActive ? "active" : "inactive"}
         />
       </g>
     </motion.svg>
