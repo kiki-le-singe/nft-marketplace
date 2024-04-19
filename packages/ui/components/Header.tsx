@@ -4,8 +4,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import {
   motion,
-  useAnimate,
-  useMotionValue,
+  AnimatePresence,
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
@@ -15,54 +14,49 @@ import { TextNormalSans } from "./TextNormalSans";
 import { Button } from "./Button";
 import { useState } from "react";
 import BurgerMenuIcon from "./icons/BurgerMenuIcon";
-import { AnimatePresence } from "framer-motion";
 import { Loading } from "./Loading";
 
 const DynamicMobileMenu = dynamic(() => import("./MobileMenu"), {
   loading: () => <Loading />,
 });
 
+const initBackgroundColor = "rgba(43, 43, 43, 1)";
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollStopped, setScrollStopped] = useState(false);
   const { scrollY } = useScroll();
-  const [scope, animate] = useAnimate();
-  const latestScrollY = useMotionValue(0);
 
   const ariaLabel = isOpen ? "Close menu" : "Open menu";
-
-  useMotionValueEvent(scrollY, "change", async (latest) => {
-    if (isOpen) return;
-
-    const baseAnimationConfig = {
-      backgroundColor: "rgba(43, 43, 43, 1)",
-    };
-
-    if (latest <= 0) {
-      await animate(scope.current, baseAnimationConfig);
-    } else {
-      let intermediateAnimationConfig = {
-        ...baseAnimationConfig,
-        backgroundColor: "rgba(43, 43, 43, 0.5)",
-      };
-
-      await animate(scope.current, intermediateAnimationConfig);
-
-      // when the scroll is done we reset the background color
-      await animate(scope.current, baseAnimationConfig);
-    }
-
-    // Set the latest scroll position
-    latestScrollY.set(latest);
-  });
 
   function handleClick() {
     setIsOpen(!isOpen);
   }
 
+  useMotionValueEvent(scrollY, "change", () => {
+    if (isOpen) return;
+
+    setScrollStopped(false); // Reset on scroll
+    clearTimeout(window.scrollTimeout);
+
+    if (!scrollStopped) {
+      window.scrollTimeout = window.setTimeout(() => {
+        setScrollStopped(true); // Set true when scrolling stops
+      }, 200);
+    }
+  });
+
   return (
     <motion.header
       className="sticky top-0 z-50 bg-black py-[15px] px-30px lg:px-[50px] lg:py-5"
-      ref={scope}
+      whileHover={{
+        backgroundColor: initBackgroundColor,
+      }}
+      animate={{
+        backgroundColor: scrollStopped
+          ? initBackgroundColor
+          : "rgba(43, 43, 43, 0.5)",
+      }}
     >
       <div className="flex justify-between items-center">
         <Logo fontSize="text-base" />
