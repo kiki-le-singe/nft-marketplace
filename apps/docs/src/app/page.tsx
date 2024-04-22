@@ -15,7 +15,7 @@ const IMG_PATH = process.env.IMG_URL;
 
 export default function Page() {
   return (
-    <div className="flex flex-col gap-y-12 md:gap-y-16 lg:gap-y-20 w-full py-10 md:py-20">
+    <div className="flex flex-col gap-y-12 md:gap-y-16 lg:gap-y-20 w-full pt-8 pb-20">
       <SectionsContainer>
         <div>
           <div className="mb-10 text-white text-2xl underline underline-offset-2">
