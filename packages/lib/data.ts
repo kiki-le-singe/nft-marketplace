@@ -1,33 +1,32 @@
 import { TrendingCollectionData, UsersData } from "../ui/types";
 
-export async function fetchTrendingData(): Promise<TrendingCollectionData[]> {
+async function fetchData<T>(endpoint: string): Promise<T | null> {
   try {
-    const res = await fetch(`${process.env.API_URL}/categories/trending`);
+    const url = `${process.env.API_URL}${endpoint}`;
+    const response = await fetch(url);
 
-    if (!res.ok) {
-      return [];
+    if (!response.ok) {
+      throw new Error(`HTTP status ${response.status}`);
     }
 
-    return await res.json();
-  } catch (error) {
-    console.error(`Fetching data failed: ${error.message}`);
-
-    throw error;
+    return await response.json();
+  } catch (error: unknown) {
+    handleError(endpoint, error);
+    return null;
   }
 }
 
-export async function fetchUsersData(): Promise<UsersData[]> {
-  try {
-    const res = await fetch(`${process.env.API_URL}/users`);
+function handleError(endpoint: string, error: unknown): void {
+  const messagePrefix = `Fetching data from ${endpoint} failed:`;
+  console.error(
+    `${messagePrefix} ${error instanceof Error ? error.message : "Non-standard error"}`
+  );
+}
 
-    if (!res.ok) {
-      return [];
-    }
+export function fetchTrendingData(): Promise<TrendingCollectionData[] | null> {
+  return fetchData<TrendingCollectionData[]>("/categories/trending");
+}
 
-    return await res.json();
-  } catch (error) {
-    console.error(`Fetching data failed: ${error.message}`);
-
-    throw error;
-  }
+export function fetchUsersData(): Promise<UsersData[] | null> {
+  return fetchData<UsersData[]>("/users");
 }
