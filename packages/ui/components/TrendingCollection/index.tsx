@@ -9,7 +9,7 @@ import "./styles.css";
 export async function TrendingCollection() {
   const data = await fetchTrendingData();
 
-  if (!data.length) {
+  if (!data?.length) {
     return null;
   }
 

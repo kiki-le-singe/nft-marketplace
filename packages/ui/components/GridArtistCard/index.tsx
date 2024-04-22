@@ -11,7 +11,7 @@ import "./styles.css";
 export async function GridArtistCard() {
   const data = await fetchUsersData();
 
-  if (!data.length) {
+  if (!data?.length) {
     return null;
   }
 
