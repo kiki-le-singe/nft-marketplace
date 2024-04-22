@@ -29,15 +29,15 @@ export function Header() {
 
   const ariaLabel = isOpen ? "Close menu" : "Open menu";
 
-  function handleClick() {
+  function handleTap() {
     setIsOpen(!isOpen);
   }
 
   useMotionValueEvent(scrollY, "change", () => {
-    if (isOpen) return;
-
     setScrollStopped(false); // Reset on scroll
     clearTimeout(window.scrollTimeout);
+
+    if (isOpen) return;
 
     if (!scrollStopped) {
       window.scrollTimeout = window.setTimeout(() => {
@@ -49,13 +49,12 @@ export function Header() {
   return (
     <motion.header
       className="sticky top-0 z-50 bg-black py-[15px] px-30px lg:px-[50px] lg:py-5"
-      whileHover={{
-        backgroundColor: initBackgroundColor,
-      }}
+      whileHover={{ backgroundColor: initBackgroundColor }}
       animate={{
-        backgroundColor: scrollStopped
-          ? initBackgroundColor
-          : "rgba(43, 43, 43, 0.5)",
+        backgroundColor:
+          isOpen || scrollStopped
+            ? initBackgroundColor
+            : "rgba(43, 43, 43, 0.5)",
       }}
     >
       <div className="flex justify-between items-center">
@@ -85,17 +84,17 @@ export function Header() {
             </ul>
           </nav>
 
-          <button
+          <motion.button
             type="button"
             className="custom-animation-scale flex items-center"
-            onClick={handleClick}
             aria-label={ariaLabel}
+            onTap={handleTap}
           >
             <BurgerMenuIcon
               isActive={isOpen}
               className="block cursor-pointer lg:hidden"
             />
-          </button>
+          </motion.button>
         </div>
       </div>
 
