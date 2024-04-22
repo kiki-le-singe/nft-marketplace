@@ -8,6 +8,7 @@ import {
   NFTHighlight,
   SectionsContainer,
   TrendingCollection,
+  TrendingCollectionSkeleton,
 } from "ui";
 import { ButtonTheme } from "ui/types";
 
@@ -22,6 +23,13 @@ export default function Page() {
             TrendingCollection
           </div>
           <TrendingCollection />
+        </div>
+
+        <div>
+          <div className="mb-10 text-white text-2xl underline underline-offset-2">
+            TrendingCollectionSkeleton
+          </div>
+          <TrendingCollectionSkeleton />
         </div>
 
         <div>
