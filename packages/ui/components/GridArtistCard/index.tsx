@@ -1,4 +1,5 @@
-import { ButtonTheme } from "../../types";
+import { fetchUsersData } from "../../../lib/data";
+import { ButtonTheme, CreatorData } from "../../types";
 import { ArtistCard } from "../ArtistCard";
 import { Button } from "../Button";
 import { TextNormalSans } from "../TextNormalSans";
@@ -7,62 +8,12 @@ import EyeIcon from "../icons/EyeIcon";
 
 import "./styles.css";
 
-interface ArtistCardData {
-  avatar: string;
-  name: string;
-}
+export async function GridArtistCard() {
+  const data = await fetchUsersData();
 
-export function GridArtistCard() {
-  const data: ArtistCardData[] = [
-    {
-      avatar: "http://localhost:3002/images/cat.png",
-      name: "Keepitreal",
-    },
-    {
-      avatar: "http://localhost:3002/images/dog.png",
-      name: "Digilab",
-    },
-    {
-      avatar: "http://localhost:3002/images/fox.png",
-      name: "Juanie",
-    },
-    {
-      avatar: "http://localhost:3002/images/crocodile.png",
-      name: "Gravityone",
-    },
-    {
-      avatar: "http://localhost:3002/images/elephant.png",
-      name: "Mr Fox",
-    },
-    {
-      avatar: "http://localhost:3002/images/hyena.png",
-      name: "Bluewhale",
-    },
-    {
-      avatar: "http://localhost:3002/images/shark.png",
-      name: "Shroomie",
-    },
-    {
-      avatar: "http://localhost:3002/images/robot.png",
-      name: "Robotica",
-    },
-    {
-      avatar: "http://localhost:3002/images/mouse.png",
-      name: "Rustyrobot",
-    },
-    {
-      avatar: "http://localhost:3002/images/lion.png",
-      name: "Animakid",
-    },
-    {
-      avatar: "http://localhost:3002/images/panda.png",
-      name: "Dotgu",
-    },
-    {
-      avatar: "http://localhost:3002/images/bird.png",
-      name: "Ghiblier",
-    },
-  ];
+  if (!data.length) {
+    return null;
+  }
 
   return (
     <section className="flex flex-col gap-y-6 md:gap-y-10 md:items-end md:flex-row md:flex-wrap">
@@ -90,7 +41,7 @@ export function GridArtistCard() {
 
       <div className="w-full">
         <ul className="grid-artist-card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-30px">
-          {data.map((artistCardData: ArtistCardData, index) => (
+          {data.map((artistCardData: CreatorData, index) => (
             <li
               className="relative custom-animation-scale"
               key={`ArtistCard-${index}`}
