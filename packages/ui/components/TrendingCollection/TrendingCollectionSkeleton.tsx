@@ -4,7 +4,7 @@ export function TrendingCollectionSkeleton() {
   const items = Array(3)
     .fill(null)
     .map((_, index) => (
-      <li className="animate-pulse" key={`TrendingCollectionSkeleton-${index}`}>
+      <li key={`TrendingCollectionSkeleton-${index}`}>
         <div>
           <div className="relative w-full rounded-20px overflow-hidden h-[238px] md:h-[295px]  mb-5">
             <div className="bg-slate-700 w-full h-full" />
@@ -25,7 +25,7 @@ export function TrendingCollectionSkeleton() {
     ));
 
   return (
-    <section className="w-full flex flex-col gap-y-6 md:gap-y-10">
+    <section className="animate-pulse w-full flex flex-col gap-y-6 md:gap-y-10">
       <div>
         <div className="bg-slate-700 rounded mb-4 w-80 h-8" />
         <div className="bg-slate-700 rounded w-96 h-8" />
