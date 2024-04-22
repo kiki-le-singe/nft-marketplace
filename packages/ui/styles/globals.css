@@ -10,5 +10,5 @@
 }
 
 .custom-animation-scale {
-  @apply hover:scale-95 ease-in duration-200;
+  @apply lg:hover:scale-95 active:scale-95 focus:scale-95 ease-in duration-200;
 }
