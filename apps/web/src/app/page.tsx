@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import {
   GridArtistCard,
   GridCategoryCard,
@@ -6,6 +7,7 @@ import {
   NFTHighlight,
   SectionsContainer,
   TrendingCollection,
+  TrendingCollectionSkeleton,
 } from "ui";
 
 // TODO:
@@ -16,7 +18,10 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-y-12 md:gap-y-16 lg:gap-y-20 w-full py-10 md:py-20">
       <SectionsContainer>
-        <TrendingCollection />
+        <Suspense fallback={<TrendingCollectionSkeleton />}>
+          <TrendingCollection />
+        </Suspense>
+
         <GridArtistCard />
         <GridCategoryCard />
         <GridNFTCard />
