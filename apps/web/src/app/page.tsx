@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import {
   GridArtistCard,
+  GridArtistCardSkeleton,
   GridCategoryCard,
   GridNFTCard,
   HowItWorks,
@@ -21,8 +22,10 @@ export default function Page() {
         <Suspense fallback={<TrendingCollectionSkeleton />}>
           <TrendingCollection />
         </Suspense>
+        <Suspense fallback={<GridArtistCardSkeleton />}>
+          <GridArtistCard />
+        </Suspense>
 
-        <GridArtistCard />
         <GridCategoryCard />
         <GridNFTCard />
       </SectionsContainer>

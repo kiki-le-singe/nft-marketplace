@@ -12,6 +12,7 @@ export * from "./components/GridNFTCard";
 export * from "./components/GridCategoryCard";
 export * from "./components/ArtistCard";
 export * from "./components/GridArtistCard";
+export * from "./components/GridArtistCard/GridArtistCardSkeleton";
 export * from "./components/icons/EyeIcon";
 export * from "./components/NFTHighlight";
 export * from "./components/HowItWorks";

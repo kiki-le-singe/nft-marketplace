@@ -3,6 +3,8 @@ import {
   AvatarName,
   Button,
   CategoryCard,
+  GridArtistCard,
+  GridArtistCardSkeleton,
   GridNFTCard,
   NFTCard,
   NFTHighlight,
@@ -30,6 +32,20 @@ export default function Page() {
             TrendingCollectionSkeleton
           </div>
           <TrendingCollectionSkeleton />
+        </div>
+
+        <div>
+          <div className="mb-10 text-white text-2xl underline underline-offset-2">
+            GridArtistCard
+          </div>
+          <GridArtistCard />
+        </div>
+
+        <div>
+          <div className="mb-10 text-white text-2xl underline underline-offset-2">
+            GridArtistCardSkeleton
+          </div>
+          <GridArtistCardSkeleton />
         </div>
 
         <div>
