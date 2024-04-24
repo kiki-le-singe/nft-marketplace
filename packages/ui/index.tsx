@@ -23,6 +23,7 @@ export * from "./components/TrendingCollection";
 export * from "./components/TrendingCollection/TrendingCollectionSkeleton";
 export * from "./components/Header";
 export * from "./components/Loading";
+export * from "./components/Modal";
 
 // utils exports
 export * from "./utils/cn";
