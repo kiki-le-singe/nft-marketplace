@@ -12,14 +12,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ["dark-gray"]: "#3B3B3B",
+        "dark-gray": "#3B3B3B",
         black: "#2B2B2B",
         gray: "#858584",
         purple: "#A259FF",
-        ["black-transparent"]: "rgba(59, 59, 59, 0.50)",
+        "black-transparent": "rgba(59, 59, 59, 0.50)",
       },
       borderRadius: {
-        ["20px"]: "20px",
+        "20px": "20px",
       },
       fontFamily: {
         sans: ["var(--font-work-sans)"],
@@ -29,7 +29,7 @@ const config: Config = {
         xxs: "320px",
         xs: "375px",
         sm: "425px",
-        ["4k"]: "2560px",
+        "4k": "2560px",
       },
       spacing: {
         "30px": "1.875rem",
