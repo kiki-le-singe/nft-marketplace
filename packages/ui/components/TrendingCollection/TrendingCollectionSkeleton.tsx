@@ -27,8 +27,8 @@ export function TrendingCollectionSkeleton() {
   return (
     <section className="animate-pulse w-full flex flex-col gap-y-6 md:gap-y-10">
       <div>
-        <div className="bg-slate-700 rounded mb-4 w-80 h-8" />
-        <div className="bg-slate-700 rounded w-96 h-8" />
+        <div className="bg-slate-700 rounded mb-4 w-48 md:w-80 h-8" />
+        <div className="bg-slate-700 rounded w-60 md:w-96 h-8" />
       </div>
 
       <ul className="grid-trending-collection grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-30px gap-y-10">
