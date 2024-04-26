@@ -5,7 +5,12 @@
 
 "use client";
 
-import { type ElementRef, useEffect, useRef } from "react";
+import {
+  type ElementRef,
+  KeyboardEventHandler,
+  useEffect,
+  useRef,
+} from "react";
 import { useRouter } from "next/navigation";
 
 export function Modal({
@@ -25,12 +30,28 @@ export function Modal({
   }, []);
 
   function onDismiss() {
-    router.back();
+    // should I use router.back() or the below code?
+
+    router.push("/");
+
+    if (dialogRef.current?.open) {
+      dialogRef.current?.close();
+    }
   }
+
+  const handleKeyDown: KeyboardEventHandler<HTMLDialogElement> = (e) => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      e.stopPropagation();
+
+      onDismiss();
+    }
+  };
 
   return (
     <dialog
       ref={dialogRef}
+      onKeyDown={handleKeyDown}
       className="w-full h-full max-w-full max-h-full m-0 bg-black bg-opacity-60"
     >
       <div className="w-full h-full">
