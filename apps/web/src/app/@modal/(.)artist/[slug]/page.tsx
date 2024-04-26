@@ -2,10 +2,10 @@ import { Suspense } from "react";
 import {
   GridArtistCard,
   GridArtistCardSkeleton,
+  GridCategoryCard,
   Modal,
+  NFTHighlight,
   SectionsContainer,
-  TrendingCollection,
-  TrendingCollectionSkeleton,
 } from "ui";
 
 export default function ArtistModal({
@@ -16,12 +16,13 @@ export default function ArtistModal({
   return (
     <Modal>
       <SectionsContainer>
-        <Suspense fallback={<TrendingCollectionSkeleton />}>
-          <TrendingCollection />
-        </Suspense>
+        <NFTHighlight />
+
         <Suspense fallback={<GridArtistCardSkeleton />}>
           <GridArtistCard />
         </Suspense>
+
+        <GridCategoryCard />
       </SectionsContainer>
     </Modal>
   );
