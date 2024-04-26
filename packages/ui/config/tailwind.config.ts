@@ -7,7 +7,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 
     // include packages if not transpiling
-    "../../packages/ui/components/**/*.{js,ts,jsx,tsx}",
+    "../components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -16,6 +16,7 @@ const config: Config = {
         black: "#2B2B2B",
         gray: "#858584",
         purple: "#A259FF",
+        "purple-transparent": "rgba(162, 89, 255, 0.50)",
         "black-transparent": "rgba(59, 59, 59, 0.50)",
       },
       borderRadius: {
