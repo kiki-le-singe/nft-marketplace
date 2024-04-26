@@ -14,7 +14,7 @@ export default function ArtistModal({
   params: { slug: number };
 }) {
   return (
-    <Modal>
+    <Modal slug={slug}>
       <SectionsContainer>
         <NFTHighlight />
 

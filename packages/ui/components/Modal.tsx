@@ -8,7 +8,13 @@
 import { type ElementRef, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 
-export function Modal({ children }: { children: React.ReactNode }) {
+export function Modal({
+  children,
+  slug,
+}: {
+  children: React.ReactNode;
+  slug: number;
+}) {
   const router = useRouter();
   const dialogRef = useRef<ElementRef<"dialog">>(null);
 
@@ -29,7 +35,10 @@ export function Modal({ children }: { children: React.ReactNode }) {
     >
       <div className="w-full h-full">
         <div className="absolute inset-0 overflow-hidden overflow-y-scroll custom-scrollbar-hide xxs:m-5 xs:m-8 sm:m-14 lg:m-[8vw] xl:m-[16vw] 2xl:m-[16vw] border border-purple-transparent rounded-xl bg-black pb-8">
-          <div className="sticky top-0 z-50 p-3 flex items-center justify-end bg-black">
+          <div className="sticky top-0 z-50 p-3 flex items-center justify-between bg-black">
+            <h2 className="text-2xl font-medium text-white">
+              Artist: <span className="text-purple">{slug}</span>
+            </h2>
             <button
               onClick={onDismiss}
               className="w-12 h-12 rounded-full cursor-pointer flex items-center justify-center font-medium text-2xl border-2 border-purple lg:hover:bg-purple active:bg-purple text-white custom-animation-scale"
