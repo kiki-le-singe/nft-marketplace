@@ -20,6 +20,7 @@ export function TrendingCollectionItem({ creations }: Props) {
       <Link
         href={`/artist/${creationPos1.id}`}
         className="inline-block relative w-full rounded-20px overflow-hidden h-[238px] md:h-[295px] custom-animation-scale mb-5"
+        scroll={false}
       >
         <Image
           src={creationPos1.image}
