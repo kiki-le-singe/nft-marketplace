@@ -9,6 +9,19 @@
   }
 }
 
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+  .custom-scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .custom-scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 .custom-animation-scale {
   @apply lg:hover:scale-95 active:scale-95 focus:scale-95 ease-in duration-200;
 }

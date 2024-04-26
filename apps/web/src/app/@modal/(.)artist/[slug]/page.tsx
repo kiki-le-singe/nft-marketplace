@@ -1,13 +1,28 @@
-import { Modal } from "ui";
+import { Suspense } from "react";
+import {
+  GridArtistCard,
+  GridArtistCardSkeleton,
+  Modal,
+  SectionsContainer,
+  TrendingCollection,
+  TrendingCollectionSkeleton,
+} from "ui";
 
-export default function PhotoModal({
+export default function ArtistModal({
   params: { slug },
 }: {
   params: { slug: number };
 }) {
   return (
     <Modal>
-      <div className="text-black">{slug}</div>
+      <SectionsContainer>
+        <Suspense fallback={<TrendingCollectionSkeleton />}>
+          <TrendingCollection />
+        </Suspense>
+        <Suspense fallback={<GridArtistCardSkeleton />}>
+          <GridArtistCard />
+        </Suspense>
+      </SectionsContainer>
     </Modal>
   );
 }
