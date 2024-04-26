@@ -30,13 +30,11 @@ export function Modal({
   }, []);
 
   function onDismiss() {
-    // should I use router.back() or the below code?
-
-    router.push("/", { scroll: false });
-
     if (dialogRef.current?.open) {
       dialogRef.current?.close();
     }
+
+    router.back();
   }
 
   const handleKeyDown: KeyboardEventHandler<HTMLDialogElement> = (e) => {
