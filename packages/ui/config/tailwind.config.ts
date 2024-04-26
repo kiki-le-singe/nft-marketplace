@@ -1,13 +1,14 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  // Warning: for the content option, the paths are relative to the web and docs apps.
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 
     // include packages if not transpiling
-    "../components/**/*.{js,ts,jsx,tsx}",
+    "../../packages/ui/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
