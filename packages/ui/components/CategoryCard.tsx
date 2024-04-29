@@ -49,7 +49,7 @@ export function CategoryCard({ title, image }: Props): JSX.Element | null {
     }
 
     return (
-      <div className="absolute inset-0 flex justify-center items-center backdrop-blur bg-white/20">
+      <div className="absolute inset-0 flex justify-center items-center backdrop-blur bg-white/20 rounded-t-20px">
         {categoryIcon}
       </div>
     );
