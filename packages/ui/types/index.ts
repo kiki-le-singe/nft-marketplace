@@ -30,4 +30,18 @@ export interface UsersData {
   avatar: string;
 }
 
+export interface CategoriesData {
+  id: number;
+  title: string;
+  image: string;
+}
+
 export interface CreatorData extends CreatorSubset {}
+
+export interface NFTCardData {
+  id: number;
+  creatorId: number;
+  image: string;
+  title: string;
+  creator: CreatorData;
+}

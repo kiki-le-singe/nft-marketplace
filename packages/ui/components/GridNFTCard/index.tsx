@@ -1,4 +1,4 @@
-import { ButtonTheme, CreatorData } from "../../types";
+import { ButtonTheme, NFTCardData } from "../../types";
 import { Button } from "../Button";
 import { NFTCard } from "../NFTCard";
 import { TextNormalSans } from "../TextNormalSans";
@@ -7,49 +7,47 @@ import EyeIcon from "../icons/EyeIcon";
 
 import "./styles.css";
 
-interface NFTCardData {
-  image: string;
-  title: string;
-  creator: CreatorData;
+const defaultData: NFTCardData[] = [
+  {
+    id: 1,
+    creatorId: 1,
+    image: "http://localhost:3002/images/kiwi-drinking.png",
+    title: "foxy life",
+    creator: {
+      avatar: "http://localhost:3002/images/parrot.png",
+      name: "bluewhale",
+    },
+  },
+  {
+    id: 2,
+    creatorId: 2,
+    image: "http://localhost:3002/images/tree-apples.png",
+    title: "cat from future",
+    creator: {
+      avatar: "http://localhost:3002/images/snail.png",
+      name: "keepitreal",
+    },
+  },
+  {
+    id: 3,
+    creatorId: 3,
+    image: "http://localhost:3002/images/monkey-on-the-moon.png",
+    title: "psycho dog",
+    creator: {
+      avatar: "http://localhost:3002/images/tiger.png",
+      name: "rustyrobot",
+    },
+  },
+];
+
+interface GridNFTCardProps {
+  data?: NFTCardData[];
 }
 
-export function GridNFTCard() {
-  const data: NFTCardData[] = [
-    {
-      image: "http://localhost:3002/images/kiwi-drinking.png",
-      title: "foxy life",
-      creator: {
-        avatar: "http://localhost:3002/images/parrot.png",
-        name: "bluewhale",
-      },
-    },
-    {
-      image: "http://localhost:3002/images/tree-apples.png",
-      title: "cat from future",
-      creator: {
-        avatar: "http://localhost:3002/images/snail.png",
-        name: "keepitreal",
-      },
-    },
-    {
-      image: "http://localhost:3002/images/monkey-on-the-moon.png",
-      title: "psycho dog",
-      creator: {
-        avatar: "http://localhost:3002/images/tiger.png",
-        name: "rustyrobot",
-      },
-    },
-    // {
-    //   image:
-    //     "http://localhost:3002/images/panda.png",
-    //   title: "designer bear",
-    //   creator: {
-    //     avatar:
-    //       "http://localhost:3002/images/panda.png",
-    //     name: "animakid",
-    //   },
-    // },
-  ];
+export function GridNFTCard({ data = defaultData }: GridNFTCardProps) {
+  if (!data?.length) {
+    return null;
+  }
 
   return (
     <section className="flex flex-col gap-y-6 md:gap-y-10 md:items-end md:flex-row md:flex-wrap">

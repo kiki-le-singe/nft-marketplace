@@ -1,4 +1,9 @@
-import { TrendingCollectionData, UsersData } from "../ui/types";
+import {
+  CategoriesData,
+  NFTCardData,
+  TrendingCollectionData,
+  UsersData,
+} from "../ui/types";
 
 async function fetchData<T>(endpoint: string): Promise<T | null> {
   try {
@@ -29,4 +34,12 @@ export function fetchTrendingData(): Promise<TrendingCollectionData[] | null> {
 
 export function fetchUsersData(): Promise<UsersData[] | null> {
   return fetchData<UsersData[]>("/users");
+}
+
+export function fetchCategoriesData(): Promise<CategoriesData[] | null> {
+  return fetchData<CategoriesData[]>("/categories");
+}
+
+export function fetchExploreData(): Promise<NFTCardData[] | null> {
+  return fetchData<NFTCardData[]>("/creations/explore");
 }

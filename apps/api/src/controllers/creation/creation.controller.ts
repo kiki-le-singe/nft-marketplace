@@ -10,6 +10,34 @@ export class CreationController {
     return this.creationService.getCreations({});
   }
 
+  @Get('explore')
+  getExploreCreations() {
+    return this.creationService.getCreations({
+      where: {
+        id: {
+          in: [1, 2, 3],
+        },
+        published: true,
+      },
+      include: {
+        creator: true,
+      },
+      select: {
+        id: true,
+        title: true,
+        image: true,
+        creatorId: true,
+        creator: {
+          select: {
+            name: true,
+            avatar: true,
+          },
+        },
+        // creator: true, // get all fields
+      },
+    });
+  }
+
   @Get('trending')
   getTrendingCreations() {
     return this.creationService.getCreations({
