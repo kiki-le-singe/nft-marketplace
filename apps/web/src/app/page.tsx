@@ -11,10 +11,6 @@ import {
   TrendingCollectionSkeleton,
 } from "ui";
 
-// TODO:
-// - update packages
-// faire une animate comme ca: https://www.framer.com/motion/scroll-animations/#examples pour les sections de la home page, au scroll???
-
 export default function Page() {
   return (
     <div className="flex flex-col gap-y-12 md:gap-y-16 lg:gap-y-20 w-full pt-8 pb-20">
