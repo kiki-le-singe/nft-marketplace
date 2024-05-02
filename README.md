@@ -1,73 +1,97 @@
-#######################################################################################
-#######################################################################################
-#######################################################################################
-#######################################################################################
-#######################################################################################
-#######################################################################################
+## Requirements
 
-@TODO:
+- [nodejs](http://nodejs.org/)
+- [pnpm](https://pnpm.io/) (you can use another package manager, but `pnpm` is recommended)
 
-# tests:
+This is my configuration at the time of writing this README:
 
-    - cypress or any others?
+> Node `>=21.4.0`
+> pnpm `>=8.12.0`
 
-# components:
+If you don't know some tools used in this project, you can check the following links:
 
-- faire des placeholders pour les loadings
+- [Turborepo Quickstart](https://turbo.build/repo/docs)
+- [Next.js](https://nextjs.org/docs)
+- [tailwindcss](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [NestJS](https://docs.nestjs.com/)
+- [Prisma](https://www.prisma.io/)
 
-# features:
+## Package Manager
 
-- Dark mode (see https://storybook.js.org/recipes/tailwindcss#tailwindcss for storybook)
+[Which package manager do you want to use?](https://turbo.build/repo/docs/getting-started/create-new#which-package-manager-do-you-want-to-use)
 
-- Ends API (See these screens: https://nft-market-place.animaapp.io/, https://nft-market-place.animaapp.io/artist-page-desktop, https://nft-market-place.animaapp.io/marketplace-desktop)
-- make create account api (See this screen: https://nft-market-place.animaapp.io/create-account-desktop)
+Turborepo doesn't handle installing packages, so you'll need to choose one of:
 
-# FIGMA: https://www.figma.com/file/sZJLQN3vFLGtxbXsqwPB2X/NFT-Marketplace-Template-(Community)?node-id=1647%3A17907&mode=dev
+- [npm](https://www.npmjs.com/)
+- [pnpm](https://pnpm.io/) (`Turborepo` recommends `pnpm`)
+- [Yarn](https://yarnpkg.com/)
 
-### DEMO a reproduire https://nft-market-place.animaapp.io/homepage-desktop
+## Installation
 
-#######################################################################################
-#######################################################################################
+```shell
+$ git clone https://github.com/kiki-le-singe/nft-marketplace.git <name>
+$ cd <name>
+$ npm install or yarn install or pnpm install
+```
 
-### NestJS
+Go to the `apps/api` and add a `.env` file with the following content:
 
-- Create an API: https://stackabuse.com/guide-to-nestjs-building-a-rest-api-with-nest-and-node/
-- Prisma https://docs.nestjs.com/recipes/prisma
-- Use Prisma Client: https://docs.nestjs.com/recipes/prisma#install-and-generate-prisma-client
-- Prisma and NestJS https://www.prisma.io/nestjs
+```javascript
+DATABASE_URL = "file:./dev.db";
+```
 
-### package manager
+## Run
 
-- pnpm
-- yarn
-- npm
+- pnpm dev
 
-### prisma
+of if you want to run the apps separately:
 
-- npx prisma migrate dev --name init (create the bdd and update it)
-- npx prisma studio (allow to see the bdd in the browser)
-- relation between bdd tables (https://www.prisma.io/docs/concepts/components/prisma-client/relation-queries#include-all-fields-for-a-specific-relation)
+- pnpm dev --filter api, pnpm dev --filter web, pnpm dev --filter docs
 
-### turbo
+- pnpm build for production. Go to the root of apps/[api|docs|web] and run pnpm start
 
-- turbo dev --filter api (launch just the api)
-- add storybook to turbo pack https://turbo.build/repo/docs/handbook/tools/storybook
-- tailwindcss with turbo https://github.com/vercel/turbo/tree/main/examples/with-tailwind
+Then open [localhost:3002](http://localhost:3002/) for the api, [localhost:3000](http://localhost:3000/) for the web and [localhost:3001](http://localhost:3001/) for the docs if the web app is already running.
 
-### Storybook
+## API
 
-- Using Storybook with Nextjs: https://storybook.js.org/recipes/next
-- Tailwindcss with Storybook:
-  - 1. https://tailwindcss.com/docs/installation
-  - 2. https://storybook.js.org/recipes/tailwindcss
-- switcher dark/light mode https://storybook.js.org/recipes/tailwindcss#add-a-theme-switcher-tool
+For the api, there are some routes available:
 
-#######################################################################################
-#######################################################################################
-#######################################################################################
-#######################################################################################
-#######################################################################################
-#######################################################################################
+- [localhost:3002](http://localhost:3002/) list some images served by the api.
+- [localhost:3002/api](http://localhost:3002/api) the starting point of the api.
+- [localhost:3002/api/creations/:id](http://localhost:3002/api/creations/1) return the creation with the id 1.
+- [localhost:3002/api/creations/explore](http://localhost:3002/api/creations/explore) return the creations to explore.
+- [localhost:3002/api/categories](http://localhost:3002/api/categories) return all the categories.
+- [localhost:3002/api/categories/trending](http://localhost:3002/api/categories/trending) return the trending categories.
+- [localhost:3002/api/users](http://localhost:3002/api/users) return all the users.
+
+## Features
+
+- Monorepo with Turborepo
+- Next.js for the web and docs apps:
+
+  - App Router (Features available in /app)
+  - SSR
+  - Data Fetching on the server side using [streaming](https://nextjs.org/docs/app/building-your-application/data-fetching/patterns#streaming) and [Loading UI and Streaming](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
+  - Dynamic imports (Lazy Loading)[https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading]
+  - tailwindcss
+  - animations (hover, click, etc.)
+  - skeleton loading [Adding loading skeletons](https://nextjs.org/learn/dashboard-app/streaming#adding-loading-skeletons)
+  - Modal with Parallel and Intercepting Routes [Parallel Routes: Modals](https://nextjs.org/docs/app/building-your-application/routing/parallel-routes#modals) [Intercepting Routes: Modals](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes#modals)
+
+- NestJS for the api app
+- Prisma for the database
+
+## [WIP] Features to come (maybe...)
+
+- authentification
+- improve the API
+- Dark/Light mode
+- SEO
+- i18n
+- a11y
+- tests (unit and e2e)
+- performance optimization (images, etc.)
 
 # Turborepo starter
 
@@ -87,6 +111,7 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
+- `api`: a [NestJS](https://nestjs.com/) app
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
 - `ui`: a stub React component library shared by both `web` and `docs` applications
@@ -150,3 +175,4 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [Package Installation](https://turbo.build/repo/docs/handbook/package-installation)
