@@ -49,6 +49,8 @@ of if you want to run the apps separately:
 - pnpm dev --filter web `(port 3000)`
 - pnpm dev --filter docs `(port 3001)`
 
+- npx prisma studio inside `apps/api` to see the database in the browser `(port 5555)`
+
 - pnpm build for production. Go to the root of apps/[api|docs|web] and run pnpm start
 
 Then open [localhost:3002](http://localhost:3002/) for the api, [localhost:3000](http://localhost:3000/) for the web and [localhost:3001](http://localhost:3001/) for the docs if the web app is already running.
