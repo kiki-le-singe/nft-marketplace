@@ -37,9 +37,7 @@ $ npm install or yarn install or pnpm install
 
 Go to the `apps/api` and add a `.env` file with the following content:
 
-```javascript
-DATABASE_URL = "file:./dev.db";
-```
+`DATABASE_URL="file:./dev.db";`
 
 ## Run
 
@@ -47,11 +45,16 @@ DATABASE_URL = "file:./dev.db";
 
 of if you want to run the apps separately:
 
-- pnpm dev --filter api, pnpm dev --filter web, pnpm dev --filter docs
+- pnpm dev --filter api `(port 3002)`
+- pnpm dev --filter web `(port 3000)`
+- pnpm dev --filter docs `(port 3001)`
 
 - pnpm build for production. Go to the root of apps/[api|docs|web] and run pnpm start
 
 Then open [localhost:3002](http://localhost:3002/) for the api, [localhost:3000](http://localhost:3000/) for the web and [localhost:3001](http://localhost:3001/) for the docs if the web app is already running.
+
+**Be careful**
+If you have run this script `pnpm dev`, the docs app could be running before the web app. In this case, the docs app will be on [localhost:3000](http://localhost:3000/) and the web app on [localhost:3001](http://localhost:3001/)
 
 ## API
 
