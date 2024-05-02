@@ -37,13 +37,13 @@ $ npm install or yarn install or pnpm install
 
 Go to the `apps/api` and add a `.env` file with the following content:
 
-`DATABASE_URL="file:./dev.db";`
+`DATABASE_URL="file:./dev.db"`
 
 ## Run
 
-- pnpm dev
+- pnpm dev (to run all the apps)
 
-of if you want to run the apps separately:
+If you want to run the apps separately:
 
 - pnpm dev --filter api `(port 3002)`
 - pnpm dev --filter web `(port 3000)`
