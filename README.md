@@ -32,12 +32,17 @@ Turborepo doesn't handle installing packages, so you'll need to choose one of:
 ```shell
 $ git clone https://github.com/kiki-le-singe/nft-marketplace.git <name>
 $ cd <name>
-$ npm install or yarn install or pnpm install
 ```
 
 Go to the `apps/api` and add a `.env` file with the following content:
 
 `DATABASE_URL="file:./dev.db"`
+
+Go to the root of the project and run the following command:
+
+```shell
+$ pnpm install or npm install or yarn install
+```
 
 ## Run
 
