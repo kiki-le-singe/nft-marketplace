@@ -2,11 +2,13 @@
 
 - [nodejs](http://nodejs.org/)
 - [pnpm](https://pnpm.io/) (you can use another package manager, but `pnpm` is recommended)
+- [Yarn](https://yarnpkg.com/) (I tested with it and normally it works but I use `pnpm`)
 
 This is my configuration at the time of writing this README:
 
 > Node `>=21.4.0`
 > pnpm `>=8.12.0`
+> yarn `>=1.22.19`
 
 If you don't know some tools used in this project, you can check the following links:
 
@@ -23,9 +25,9 @@ If you don't know some tools used in this project, you can check the following l
 
 Turborepo doesn't handle installing packages, so you'll need to choose one of:
 
-- [npm](https://www.npmjs.com/)
 - [pnpm](https://pnpm.io/) (`Turborepo` recommends `pnpm`)
 - [Yarn](https://yarnpkg.com/)
+- [npm](https://www.npmjs.com/) (I didn't test with `npm`...)
 
 ## Installation
 
@@ -41,27 +43,45 @@ Go to the `apps/api` and add a `.env` file with the following content:
 Go to the root of the project and run the following command:
 
 ```shell
-$ pnpm install or npm install or yarn install
+$ pnpm install or yarn install or npm install
 ```
 
 ## Run
 
-- pnpm dev (to run all the apps)
+```shell
+$ pnpm dev or yarn dev (to run all the apps)
+```
 
 If you want to run the apps separately:
 
-- pnpm dev --filter api `(port 3002)`
-- pnpm dev --filter web `(port 3000)`
-- pnpm dev --filter docs `(port 3001)`
+```shell
+$ pnpm|yarn dev --filter api (port 3002)
+$ pnpm|yarn dev --filter web (port 3000)
+$ pnpm|yarn dev --filter docs (port 3001)
+```
 
-- `npx prisma studio` inside `apps/api` to see the database in the browser `(port 5555)`
+Inside `apps/api` to see the database in the browser `(port 5555)`:
 
-- `pnpm build` for production. Go to the root of `apps/[api|docs|web]` and run `pnpm start`
+```shell
+$ npx prisma studio
+```
+
+For production:
+
+```shell
+$ pnpm|yarn build
+```
+
+Then go to the root of `apps/[api|docs|web]` and run:
+
+```shell
+$ pnpm|yarn start
+```
 
 Then open [localhost:3002](http://localhost:3002/) for the api, [localhost:3000](http://localhost:3000/) for the web and [localhost:3001](http://localhost:3001/) for the docs if the web app is already running.
 
 `Be careful`
-If you have run this script `pnpm dev`, the docs app could be running before the web app. In this case, the docs app will be on [localhost:3000](http://localhost:3000/) and the web app on [localhost:3001](http://localhost:3001/)
+If you have run this script `pnpm|yarn dev`, the docs app could be running before the web app. In this case, the docs app will be on [localhost:3000](http://localhost:3000/) and the web app on [localhost:3001](http://localhost:3001/)
 
 ## API
 
@@ -186,3 +206,4 @@ Learn more about the power of Turborepo:
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 - [Package Installation](https://turbo.build/repo/docs/handbook/package-installation)
+- [Workspaces](https://turbo.build/repo/docs/handbook/workspaces)
