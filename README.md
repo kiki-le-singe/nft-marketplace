@@ -3,12 +3,14 @@
 - [nodejs](http://nodejs.org/)
 - [pnpm](https://pnpm.io/) (you can use another package manager, but `pnpm` is recommended)
 - [Yarn](https://yarnpkg.com/) (I tested with it and normally it works but I use `pnpm`)
+- [pnpm](https://pnpm.io/) (I didn't test with it...)
 
 This is my configuration at the time of writing this README:
 
-> Node `>=22.1.0`
-> pnpm `>=9.0.6`
-> yarn `>=1.22.22`
+> Node `22.1.0`
+> pnpm `9.0.6`
+> yarn `1.22.22`
+> npm `10.7.0`
 
 If you don't know some tools used in this project, you can check the following links:
 
@@ -27,7 +29,7 @@ Turborepo doesn't handle installing packages, so you'll need to choose one of:
 
 - [pnpm](https://pnpm.io/) (`Turborepo` recommends `pnpm`)
 - [Yarn](https://yarnpkg.com/)
-- [npm](https://www.npmjs.com/) (I didn't test with `npm`...)
+- [npm](https://www.npmjs.com/)
 
 ## Installation
 
@@ -36,28 +38,46 @@ $ git clone https://github.com/kiki-le-singe/nft-marketplace.git <name>
 $ cd <name>
 ```
 
-Go to the `apps/api` and add a `.env` file with the following content:
+`Warning` If you use `yarn` or `npm`, you need to update the `package.json` file in the root of the project and use your version of `yarn` or `npm`:
 
-`DATABASE_URL="file:./dev.db"`
+```json
+{
+  "packageManager": "yarn@1.22.22",
+  "workspaces": ["apps/*", "packages/*"]
+}
+```
+
+or
+
+```json
+{
+  "packageManager": "npm@10.7.0",
+  "workspaces": ["apps/*", "packages/*"]
+}
+```
+
+You must to replace all `"workspace:*"` by `"*"` inside the `package.json` files in the `apps`, `packages` and the root of the project. Indeed, only `pnpm` uses the `workspace` keyword.
+
+Then go to the `apps/api` and add a `.env` file with the following content: `DATABASE_URL="file:./dev.db"`
 
 Go to the root of the project and run the following command:
 
 ```shell
-$ pnpm install or yarn install or npm install
+$ pnpm|yarn|npm install
 ```
 
 ## Run
 
 ```shell
-$ pnpm dev or yarn dev (to run all the apps)
+$ pnpm|yarn|npm dev (to run all the apps)
 ```
 
 If you want to run the apps separately:
 
 ```shell
-$ pnpm|yarn dev --filter api (port 3002)
-$ pnpm|yarn dev --filter web (port 3000)
-$ pnpm|yarn dev --filter docs (port 3001)
+$ pnpm|yarn|npm dev --filter api (port 3002)
+$ pnpm|yarn|npm dev --filter web (port 3000)
+$ pnpm|yarn|npm dev --filter docs (port 3001)
 ```
 
 Inside `apps/api` to see the database in the browser `(port 5555)`:
@@ -69,13 +89,13 @@ $ npx prisma studio
 For production:
 
 ```shell
-$ pnpm|yarn build
+$ pnpm|yarn|npm build
 ```
 
 Then go to the root of `apps/[api|docs|web]` and run:
 
 ```shell
-$ pnpm|yarn start
+$ pnpm|yarn|npm start
 ```
 
 Then open [localhost:3002](http://localhost:3002/) for the api, [localhost:3000](http://localhost:3000/) for the web and [localhost:3001](http://localhost:3001/) for the docs if the web app is already running.
@@ -105,6 +125,7 @@ For the api, there are some routes available:
   - Data Fetching on the server side using [streaming](https://nextjs.org/docs/app/building-your-application/data-fetching/patterns#streaming) and [Loading UI and Streaming](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
   - Dynamic imports (Lazy Loading)[https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading]
   - tailwindcss
+  - Responsive Design
   - animations (hover, click, etc.)
   - skeleton loading [Adding loading skeletons](https://nextjs.org/learn/dashboard-app/streaming#adding-loading-skeletons)
   - Modal with Parallel and Intercepting Routes [Parallel Routes: Modals](https://nextjs.org/docs/app/building-your-application/routing/parallel-routes#modals) [Intercepting Routes: Modals](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes#modals)
