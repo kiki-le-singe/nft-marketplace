@@ -58,7 +58,7 @@ or
 
 You must to replace all `"workspace:*"` by `"*"` inside the `package.json` files in the `apps`, `packages` and the root of the project. Indeed, only `pnpm` uses the `workspace` keyword.
 
-Then go to the `apps/api` and add a `.env` file with the following content: `DATABASE_URL="file:./dev.db"`
+When your package manager is set, you can go to the `apps/api` and add a `.env` file with the following content: `DATABASE_URL="file:./dev.db"`
 
 Go to the root of the project and run the following command:
 
