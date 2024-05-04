@@ -5,7 +5,6 @@ import {
   GridCategoryCard,
   Modal,
   NFTHighlight,
-  SectionsContainer,
 } from "ui";
 
 export default function ArtistModal({
