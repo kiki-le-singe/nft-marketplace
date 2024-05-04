@@ -6,9 +6,9 @@
 
 This is my configuration at the time of writing this README:
 
-> Node `>=21.4.0`
-> pnpm `>=8.12.0`
-> yarn `>=1.22.19`
+> Node `>=22.1.0`
+> pnpm `>=9.0.6`
+> yarn `>=1.22.22`
 
 If you don't know some tools used in this project, you can check the following links:
 
