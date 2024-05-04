@@ -7,10 +7,10 @@
 
 This is my configuration at the time of writing this README:
 
-> Node `22.1.0`
-> pnpm `9.0.6`
-> yarn `1.22.22`
-> npm `10.7.0`
+- Node `22.1.0`
+- pnpm `9.0.6`
+- yarn `1.22.22`
+- npm `10.7.0`
 
 If you don't know some tools used in this project, you can check the following links:
 
@@ -101,7 +101,7 @@ $ pnpm|yarn|npm start
 Then open [localhost:3002](http://localhost:3002/) for the api, [localhost:3000](http://localhost:3000/) for the web and [localhost:3001](http://localhost:3001/) for the docs if the web app is already running.
 
 `Be careful`
-If you have run this script `pnpm|yarn dev`, the docs app could be running before the web app. In this case, the docs app will be on [localhost:3000](http://localhost:3000/) and the web app on [localhost:3001](http://localhost:3001/)
+If you have run this script `pnpm|yarn|npm dev`, the docs app could be running before the web app. In this case, the docs app will be on [localhost:3000](http://localhost:3000/) and the web app on [localhost:3001](http://localhost:3001/)
 
 ## API
 
