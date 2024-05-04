@@ -20,8 +20,11 @@ importers:
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
+      tsconfig:
+        specifier: workspace:*
+        version: link:packages/tsconfig
       turbo:
-        specifier: ^1.13.3
+        specifier: latest
         version: 1.13.3
 
   apps/api:
