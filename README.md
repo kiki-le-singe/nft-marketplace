@@ -1,9 +1,9 @@
 ## Requirements
 
 - [nodejs](http://nodejs.org/)
-- [pnpm](https://pnpm.io/) (you can use another package manager, but `pnpm` is recommended)
-- [Yarn](https://yarnpkg.com/) (I tested with it and normally it works but I use `pnpm`)
-- [pnpm](https://pnpm.io/) (I didn't test with it...)
+- [pnpm](https://pnpm.io/) (you can use another package manager, but `pnpm` is recommended. Personally, I use it for this project)
+- [Yarn](https://yarnpkg.com/)
+- [npm](https://www.npmjs.com/)
 
 This is my configuration at the time of writing this README:
 
