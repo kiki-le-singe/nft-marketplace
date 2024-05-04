@@ -28,19 +28,34 @@ export function NFTHighlight() {
                 </TextNormalMono>
 
                 <div className="flex flex-row gap-x-2">
-                  <TextNormalMono tag="span" className="font-bold text-4xl">
+                  <TextNormalMono
+                    tag="span"
+                    className="font-bold text-2xl md:text-4xl"
+                  >
                     59
                   </TextNormalMono>
-                  <TextNormalMono tag="span" className="font-bold text-4xl">
+                  <TextNormalMono
+                    tag="span"
+                    className="font-bold text-2xl md:text-4xl"
+                  >
                     :
                   </TextNormalMono>
-                  <TextNormalMono tag="span" className="font-bold text-4xl">
+                  <TextNormalMono
+                    tag="span"
+                    className="font-bold text-2xl md:text-4xl"
+                  >
                     59
                   </TextNormalMono>
-                  <TextNormalMono tag="span" className="font-bold text-4xl">
+                  <TextNormalMono
+                    tag="span"
+                    className="font-bold text-2xl md:text-4xl"
+                  >
                     :
                   </TextNormalMono>
-                  <TextNormalMono tag="span" className="font-bold text-4xl">
+                  <TextNormalMono
+                    tag="span"
+                    className="font-bold text-2xl md:text-4xl"
+                  >
                     59
                   </TextNormalMono>
                 </div>

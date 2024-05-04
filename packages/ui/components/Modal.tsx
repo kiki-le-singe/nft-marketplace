@@ -53,7 +53,7 @@ export function Modal({
       className="w-full h-full max-w-full max-h-full m-0 bg-black bg-opacity-60"
     >
       <div className="w-full h-full">
-        <div className="absolute inset-0 overflow-hidden overflow-y-scroll custom-scrollbar-hide xxs:m-5 xs:m-8 sm:m-14 lg:m-[8vw] xl:m-[14vw] 2xl:m-[14vw] border border-purple-transparent rounded-xl bg-black pb-8">
+        <div className="absolute inset-0 overflow-hidden overflow-y-scroll custom-scrollbar-hide xxs:m-5 xs:m-8 sm:m-14 lg:m-[8vw] xl:m-[10vw] 2xl:m-[10vw] border border-purple-transparent rounded-xl bg-black pb-8">
           <div className="sticky top-0 z-50 p-3 flex items-center justify-between bg-black">
             <h2 className="text-2xl font-medium text-white">
               Artist: <span className="text-purple">{slug}</span>
