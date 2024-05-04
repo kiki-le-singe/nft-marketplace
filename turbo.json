@@ -14,8 +14,7 @@
       ],
       "outputs": [
         ".next/**",
-        "!.next/cache/**",
-        "storybook-static/**"
+        "!.next/cache/**"
       ]
     },
     "lint": {},
