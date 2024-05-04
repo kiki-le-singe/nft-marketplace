@@ -15,15 +15,17 @@ export default function ArtistModal({
 }) {
   return (
     <Modal slug={slug}>
-      <SectionsContainer>
+      <div className="flex flex-col gap-y-12">
         <NFTHighlight />
 
-        <Suspense fallback={<GridArtistCardSkeleton />}>
-          <GridArtistCard />
-        </Suspense>
+        <div className="flex flex-col w-full xxs:px-2 xs:px-2 sm:px-5 md:px-10 lg:px-[5vw] xl:px-[5vw] 2xl:px-[5vw] gap-y-12">
+          <Suspense fallback={<GridArtistCardSkeleton />}>
+            <GridArtistCard />
+          </Suspense>
 
-        <GridCategoryCard />
-      </SectionsContainer>
+          <GridCategoryCard />
+        </div>
+      </div>
     </Modal>
   );
 }
