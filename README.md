@@ -1,3 +1,13 @@
+# NFT Marketplace
+
+## Introduction
+
+I started this project mainly for fun. It is a personal project to learn and experiment with various tools like monorepo with [Turborepo](https://turbo.build/repo), [Next.js](https://nextjs.org/), [NestJS](https://nestjs.com/), [Prisma](https://www.prisma.io/), [tailwindcss](https://tailwindcss.com/)... I created a fake responsive application to explore these technologies. I use this [NFT Marketplace](https://www.figma.com/community/file/1173962104946517060/nft-marketplace-template-create-an-nft-website-in-minutes) template from [Anima](https://www.figma.com/@anima) as strong inspiration. I hope it can help or inspire anyone interested in these tools. Enjoy it! :)
+
+![Mobile](./docs/mobile.gif)
+![Tablet](./docs/tablet.gif)
+![Desktop](./docs/desktop.gif)
+
 ## Requirements
 
 - [nodejs](http://nodejs.org/)
