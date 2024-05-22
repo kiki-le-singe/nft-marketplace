@@ -4,15 +4,15 @@
 
 I started this project mainly for fun. It is a personal project to learn and experiment with various tools like monorepo with [Turborepo](https://turbo.build/repo), [Next.js](https://nextjs.org/), [NestJS](https://nestjs.com/), [Prisma](https://www.prisma.io/), [tailwindcss](https://tailwindcss.com/)... I created a fake responsive application to explore these technologies. I use this [NFT Marketplace](https://www.figma.com/community/file/1173962104946517060/nft-marketplace-template-create-an-nft-website-in-minutes) template from [Anima](https://www.figma.com/@anima) as strong inspiration. I hope it can help or inspire anyone interested in these tools. Enjoy it! :)
 
-<br /><br />
+<br />
 
 ![Mobile](./docs/mobile.gif)
 
-<br /><br />
+<br />
 
 ![Tablet](./docs/tablet.gif)
 
-<br /><br />
+<br />
 
 ![Desktop](./docs/desktop.gif)
 
@@ -246,3 +246,6 @@ Learn more about the power of Turborepo:
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 - [Package Installation](https://turbo.build/repo/docs/handbook/package-installation)
 - [Workspaces](https://turbo.build/repo/docs/handbook/workspaces)
+- [Prisma and NestJS](https://www.prisma.io/nestjs)
+- [NestJS Recipes Prisma](https://docs.nestjs.com/recipes/prisma)
+- [NestJS/Prisma - Install and generate Prisma Client](https://docs.nestjs.com/recipes/prisma#install-and-generate-prisma-client)
