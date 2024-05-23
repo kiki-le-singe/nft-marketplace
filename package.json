@@ -9,10 +9,10 @@
   },
   "devDependencies": {
     "@turbo/gen": "^1.13.3",
-    "eslint": "^9.1.1",
+    "eslint": "^9.3.0",
     "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*",
     "prettier": "^3.2.5",
+    "tsconfig": "workspace:*",
     "turbo": "latest"
   },
   "packageManager": "pnpm@9.0.6",

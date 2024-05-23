@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "framer-motion": "^11.1.7",
+    "framer-motion": "^11.2.6",
     "lib": "workspace:*",
     "next": "^14.2.3",
     "react": "^18.3.1",
@@ -20,8 +20,8 @@
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@types/node": "^20.12.7",
-    "@types/react": "^18.3.1",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
     "eslint-config-custom": "workspace:*",
