@@ -49,8 +49,8 @@ export function CategoryCard({ title, image }: Props): JSX.Element | null {
     }
 
     return (
-      <div className="absolute inset-0 flex justify-center items-center backdrop-blur bg-white/20 rounded-t-20px">
-        {categoryIcon}
+      <div className="absolute inset-0 flex justify-center items-center bg-white/20 rounded-t-20px">
+        <div className="backdrop-blur rounded-full p-1">{categoryIcon}</div>
       </div>
     );
   }, [title]);
@@ -61,7 +61,7 @@ export function CategoryCard({ title, image }: Props): JSX.Element | null {
         <Image
           src={image}
           alt={`Category of ${title}`}
-          sizes="630px"
+          sizes="(max-width: 768px) 50vw, 230px"
           className="object-cover"
           fill
         />

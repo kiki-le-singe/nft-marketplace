@@ -32,7 +32,7 @@ export function NFTCard({
         <Image
           src={image}
           alt="Picture of the NFT"
-          sizes="630px"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 315px"
           className="object-cover"
           fill
         />

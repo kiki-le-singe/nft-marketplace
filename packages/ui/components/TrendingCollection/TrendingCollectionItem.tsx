@@ -25,10 +25,9 @@ export function TrendingCollectionItem({ creations }: Props) {
         <Image
           src={creationPos1.image}
           alt="Picture of the Trending"
-          sizes="630px"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 315px"
           className="object-cover"
           fill
-          priority
         />
       </Link>
 
@@ -40,7 +39,7 @@ export function TrendingCollectionItem({ creations }: Props) {
           <Image
             src={creationPos2.image}
             alt="Picture of the Trending"
-            sizes="630px"
+            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 100px"
             className="object-cover"
             fill
           />
@@ -53,7 +52,7 @@ export function TrendingCollectionItem({ creations }: Props) {
           <Image
             src={creationPos3.image}
             alt="Picture of the Trending"
-            sizes="630px"
+            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 100px"
             className="object-cover"
             fill
           />
