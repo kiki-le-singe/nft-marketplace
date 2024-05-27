@@ -7,6 +7,14 @@ import {
   SectionsContainer,
 } from "ui";
 
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+
+  return {
+    title: `Artist ${slug}`,
+  };
+}
+
 export default async function Page({
   params: { slug },
 }: {

@@ -1,4 +1,6 @@
 import { Suspense } from "react";
+import { Metadata } from "next";
+
 import {
   GridArtistCard,
   GridArtistCardSkeleton,
@@ -7,6 +9,10 @@ import {
   TrendingCollection,
   TrendingCollectionSkeleton,
 } from "ui";
+
+export const metadata: Metadata = {
+  title: "Artists",
+};
 
 export default function Page() {
   return (
