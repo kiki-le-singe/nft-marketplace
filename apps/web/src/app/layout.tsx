@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     title: "NFT Marketplace",
     description:
       "Exploring Modern Web Development: An NFT Marketplace with Turborepo, Next.js, TailwindCSS, NestJS, and More…",
+    siteName: "NFT Marketplace",
+    images: `${process.env.IMG_URL}/monkey-driving.webp`,
   },
 };
 
