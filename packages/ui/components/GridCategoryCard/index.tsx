@@ -20,7 +20,7 @@ const defaultData: CategoriesData[] = [
   },
   {
     id: 4,
-    image: "http://localhost:3002/images/virtual_world.png",
+    image: "http://localhost:3002/images/virtual_world.webp",
     title: "photography",
   },
   {

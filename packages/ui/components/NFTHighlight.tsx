@@ -4,7 +4,7 @@ import EyeIcon from "./icons/EyeIcon";
 
 export function NFTHighlight() {
   return (
-    <section className="bg-[url('http://localhost:3002/images/virtual_world.png')] bg-cover bg-no-repeat bg-top md:bg-center lg:bg-center w-full h-auto">
+    <section className="bg-[url('http://localhost:3002/images/virtual_world.webp')] bg-cover bg-no-repeat bg-top md:bg-center lg:bg-center w-full h-auto">
       <div className="bg-gradient-to-t from-[#A259FF] pt-[120px] px-7 xs:px-14 lg:px-[5vw] xl:px-[15vw] 2xl:px-[15vw] pb-10">
         <div className="py-[10px] mb-7 px-5 bg-black rounded-20px w-fit">
           <AvatarName
