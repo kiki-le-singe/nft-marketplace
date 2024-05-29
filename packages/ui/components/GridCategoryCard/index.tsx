@@ -5,17 +5,17 @@ import { TextSemiBoldSans } from "../TextSemiBoldSans";
 const defaultData: CategoriesData[] = [
   {
     id: 1,
-    image: "http://localhost:3002/images/hyena2.png",
+    image: "http://localhost:3002/images/hyena2.webp",
     title: "art",
   },
   {
     id: 2,
-    image: "http://localhost:3002/images/key.png",
+    image: "http://localhost:3002/images/key.webp",
     title: "collectibles",
   },
   {
     id: 3,
-    image: "http://localhost:3002/images/sports.png",
+    image: "http://localhost:3002/images/sports.webp",
     title: "music",
   },
   {
@@ -25,22 +25,22 @@ const defaultData: CategoriesData[] = [
   },
   {
     id: 5,
-    image: "http://localhost:3002/images/tree-apples.png",
+    image: "http://localhost:3002/images/tree-apples.webp",
     title: "video",
   },
   {
     id: 6,
-    image: "http://localhost:3002/images/parrot.png",
+    image: "http://localhost:3002/images/parrot.webp",
     title: "utility",
   },
   {
     id: 7,
-    image: "http://localhost:3002/images/fruits-watermelon.png",
+    image: "http://localhost:3002/images/fruits-watermelon.webp",
     title: "sport",
   },
   {
     id: 8,
-    image: "http://localhost:3002/images/kiwi-drinking.png",
+    image: "http://localhost:3002/images/kiwi-drinking.webp",
     title: "virtual worlds",
   },
 ];
