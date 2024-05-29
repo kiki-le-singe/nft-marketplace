@@ -54,7 +54,7 @@ export default function Page() {
           </div>
           <ArtistCard
             creator={{
-              avatar: `${IMG_PATH}/fox.png`,
+              avatar: `${IMG_PATH}/fox.webp`,
               name: "Mr Fox",
             }}
           />
@@ -69,7 +69,7 @@ export default function Page() {
             <div className="mb-5 text-white underline underline-offset-2">
               Default
             </div>
-            <AvatarName name="Mr Fox" avatar={`${IMG_PATH}/cat.png`} />
+            <AvatarName name="Mr Fox" avatar={`${IMG_PATH}/cat.webp`} />
           </div>
 
           <div>
@@ -79,7 +79,7 @@ export default function Page() {
             <AvatarName
               theme="big"
               name="Mr Fox"
-              avatar={`${IMG_PATH}/dog.png`}
+              avatar={`${IMG_PATH}/dog.webp`}
             />
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function Page() {
           <div className="mb-10 text-white text-2xl underline underline-offset-2">
             CategoryCard
           </div>
-          <CategoryCard title="Art" image={`${IMG_PATH}/crocodile.png`} />
+          <CategoryCard title="Art" image={`${IMG_PATH}/crocodile.webp`} />
         </div>
 
         <div>
@@ -130,10 +130,10 @@ export default function Page() {
             NFTCard
           </div>
           <NFTCard
-            image={`${IMG_PATH}/ant.png`}
+            image={`${IMG_PATH}/ant.webp`}
             title="designer bear"
             creator={{
-              avatar: `${IMG_PATH}/cat.png`,
+              avatar: `${IMG_PATH}/cat.webp`,
               name: "animakid",
             }}
           />

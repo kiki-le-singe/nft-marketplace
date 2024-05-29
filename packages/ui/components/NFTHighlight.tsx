@@ -8,7 +8,7 @@ export function NFTHighlight() {
       <div className="bg-gradient-to-t from-[#A259FF] pt-[120px] px-7 xs:px-14 lg:px-[5vw] xl:px-[15vw] 2xl:px-[15vw] pb-10">
         <div className="py-[10px] mb-7 px-5 bg-black rounded-20px w-fit">
           <AvatarName
-            avatar="http://localhost:3002/images/cat.png"
+            avatar="http://localhost:3002/images/cat.webp"
             name="Mr Fox"
           />
         </div>

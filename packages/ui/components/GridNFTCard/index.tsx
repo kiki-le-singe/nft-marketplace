@@ -11,30 +11,30 @@ const defaultData: NFTCardData[] = [
   {
     id: 1,
     creatorId: 1,
-    image: "http://localhost:3002/images/kiwi-drinking.png",
+    image: "http://localhost:3002/images/kiwi-drinking.webp",
     title: "foxy life",
     creator: {
-      avatar: "http://localhost:3002/images/parrot.png",
+      avatar: "http://localhost:3002/images/parrot.webp",
       name: "bluewhale",
     },
   },
   {
     id: 2,
     creatorId: 2,
-    image: "http://localhost:3002/images/tree-apples.png",
+    image: "http://localhost:3002/images/tree-apples.webp",
     title: "cat from future",
     creator: {
-      avatar: "http://localhost:3002/images/snail.png",
+      avatar: "http://localhost:3002/images/snail.webp",
       name: "keepitreal",
     },
   },
   {
     id: 3,
     creatorId: 3,
-    image: "http://localhost:3002/images/monkey-on-the-moon.png",
+    image: "http://localhost:3002/images/monkey-on-the-moon.webp",
     title: "psycho dog",
     creator: {
-      avatar: "http://localhost:3002/images/tiger.png",
+      avatar: "http://localhost:3002/images/tiger.webp",
       name: "rustyrobot",
     },
   },
