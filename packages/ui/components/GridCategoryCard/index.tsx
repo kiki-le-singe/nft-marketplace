@@ -2,45 +2,47 @@ import { CategoriesData } from "../../types";
 import { CategoryCard } from "../CategoryCard";
 import { TextSemiBoldSans } from "../TextSemiBoldSans";
 
+const IMG_PATH = process.env.IMG_URL;
+
 const defaultData: CategoriesData[] = [
   {
     id: 1,
-    image: "http://localhost:3002/images/hyena2.webp",
+    image: `${IMG_PATH}/hyena2.webp`,
     title: "art",
   },
   {
     id: 2,
-    image: "http://localhost:3002/images/key.webp",
+    image: `${IMG_PATH}/key.webp`,
     title: "collectibles",
   },
   {
     id: 3,
-    image: "http://localhost:3002/images/sports.webp",
+    image: `${IMG_PATH}/sports.webp`,
     title: "music",
   },
   {
     id: 4,
-    image: "http://localhost:3002/images/virtual_world.webp",
+    image: `${IMG_PATH}/virtual_world.webp`,
     title: "photography",
   },
   {
     id: 5,
-    image: "http://localhost:3002/images/tree-apples.webp",
+    image: `${IMG_PATH}/tree-apples.webp`,
     title: "video",
   },
   {
     id: 6,
-    image: "http://localhost:3002/images/parrot.webp",
+    image: `${IMG_PATH}/parrot.webp`,
     title: "utility",
   },
   {
     id: 7,
-    image: "http://localhost:3002/images/fruits-watermelon.webp",
+    image: `${IMG_PATH}/fruits-watermelon.webp`,
     title: "sport",
   },
   {
     id: 8,
-    image: "http://localhost:3002/images/kiwi-drinking.webp",
+    image: `${IMG_PATH}/kiwi-drinking.webp`,
     title: "virtual worlds",
   },
 ];
