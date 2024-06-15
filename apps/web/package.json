@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "framer-motion": "^11.2.6",
+    "framer-motion": "^11.2.10",
     "lib": "workspace:*",
-    "next": "^14.2.3",
+    "next": "^14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sharp": "^0.33.4",
@@ -21,13 +21,13 @@
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@types/node": "^20.12.12",
-    "@types/react": "^18.3.2",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
     "eslint-config-custom": "workspace:*",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3",
+    "tailwindcss": "^3.4.4",
     "tsconfig": "workspace:*",
     "typescript": "^5.4.5"
   }
