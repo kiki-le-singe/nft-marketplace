@@ -15,6 +15,7 @@ import { Button } from "./Button";
 import { useState } from "react";
 import BurgerMenuIcon from "./icons/BurgerMenuIcon";
 import { Loading } from "./Loading";
+import DarkLightModeButton from "./DarkLightModeButton";
 
 const DynamicMobileMenu = dynamic(() => import("./MobileMenu"), {
   loading: () => <Loading />,
@@ -48,7 +49,7 @@ export function Header() {
 
   return (
     <motion.header
-      className="sticky top-0 z-50 bg-black py-[15px] px-30px lg:px-[50px] lg:py-5"
+      className="sticky top-0 z-50 bg-black py-[15px] px-5 lg:px-[50px] lg:py-5"
       whileHover={{ backgroundColor: initBackgroundColor }}
       animate={{
         backgroundColor:
@@ -60,7 +61,7 @@ export function Header() {
       <div className="flex justify-between items-center">
         <Logo fontSize="text-base" />
 
-        <div>
+        <div className="flex gap-3">
           <nav className="hidden lg:block">
             <ul className="flex justify-center items-center gap-2.5">
               <li className="custom-animation-scale px-5">
@@ -84,16 +85,15 @@ export function Header() {
             </ul>
           </nav>
 
+          <DarkLightModeButton />
+
           <motion.button
             type="button"
-            className="custom-animation-scale flex items-center"
+            className="custom-animation-scale flex items-center cursor-pointer lg:hidden"
             aria-label={ariaLabel}
             onTap={handleTap}
           >
-            <BurgerMenuIcon
-              isActive={isOpen}
-              className="block cursor-pointer lg:hidden"
-            />
+            <BurgerMenuIcon isActive={isOpen} className="block" />
           </motion.button>
         </div>
       </div>

@@ -33,7 +33,7 @@ export function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-black ${SpaceMonoFont.variable} ${WorkSansFont.variable}`}
+      className={`bg-gradient-to-b from-rose-300 via-orange-300 to-rose-300 dark:bg-gradient-to-b dark:from-black dark:via-black dark:to-black dark:bg-black ${SpaceMonoFont.variable} ${WorkSansFont.variable}`}
     >
       <body>
         <Header />

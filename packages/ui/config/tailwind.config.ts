@@ -39,5 +39,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  darkMode: "selector", // https://tailwindcss.com/docs/dark-mode
 };
 export default config;
