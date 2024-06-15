@@ -156,7 +156,6 @@ For the api, there are some routes available:
 
 - authentification
 - improve the API
-- Dark/Light mode
 - SEO (metadata, etc.)
 - i18n
 - a11y
