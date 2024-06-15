@@ -147,6 +147,7 @@ For the api, there are some routes available:
   - animations (hover, click, etc.)
   - skeleton loading [Adding loading skeletons](https://nextjs.org/learn/dashboard-app/streaming#adding-loading-skeletons)
   - Modal with Parallel and Intercepting Routes [Parallel Routes: Modals](https://nextjs.org/docs/app/building-your-application/routing/parallel-routes#modals) [Intercepting Routes: Modals](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes#modals)
+  - [Dark Mode](https://tailwindcss.com/docs/dark-mode)
 
 - NestJS for the api app
 - Prisma for the database
