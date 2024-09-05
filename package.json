@@ -8,12 +8,12 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@turbo/gen": "^2.0.8",
-    "eslint": "^9.7.0",
+    "@turbo/gen": "^2.1.1",
+    "eslint": "^9.9.1",
     "eslint-config-custom": "workspace:*",
     "prettier": "^3.3.3",
     "tsconfig": "workspace:*",
-    "turbo": "^2.0.8"
+    "turbo": "^2.1.1"
   },
   "packageManager": "pnpm@9.0.6",
   "engines": {
