@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "eslint-config-next": "^14.2.4",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-config-turbo": "^2.0.4",
+    "eslint-config-next": "^14.2.30",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-config-turbo": "^2.5.5",
     "eslint-plugin-react": "7.34.2"
   },
   "publishConfig": {
