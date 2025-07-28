@@ -13,7 +13,6 @@ import { AppService } from 'src/services/app/app.service';
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '../../..', 'client'),
       serveStaticOptions: { index: false },
-      exclude: ['/api/(.*)'],
     }),
     UserModule,
     CreationModule,
